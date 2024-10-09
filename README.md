@@ -21,7 +21,7 @@ A: Unfortunately, no. I check a chapter variable from the base BG2EE game - nece
 
 ### Q: How do I report bugs or suggest improvements?
 
-A: This is my second released mod. I've no doubt many inconsistencies and bugs are present. Please contact me and I'll make the changes (with credit & thanks). <3
+A: This is my first released quest mod. I've no doubt many inconsistencies and bugs are present. Please contact me and I'll make the changes (with credit & thanks). <3
 
 
 ### Q: The flesh is weak?
@@ -31,7 +31,7 @@ A: Even in death I serve the Omnissiah! :3
 
 ## CHANGELOG
 
-* 1.0 - First release for BGCCCC. 
+* 1.0 - Initial Release.
 
 
 ## CREDITS
