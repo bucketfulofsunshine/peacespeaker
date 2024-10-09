@@ -1,6 +1,6 @@
 # PEACESPEAKER, THE ANTI-VIOLENCE SWORD
 
-Embark on a short quest featuring a sentient sword, an apprentice who's in WAAAYYY over her head, and an grumpy Cowled Wizard. Hopefully this mod can challenge what CHARNAME's definition of justice is. :)
+Embark on a short quest featuring a sentient sword, an apprentice who's in WAAAYYY over her head, and a grumpy Cowled Wizard. Hopefully this mod can challenge what CHARNAME's definition of justice is. :)
 
 ## FAQ
 
