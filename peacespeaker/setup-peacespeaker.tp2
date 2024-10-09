@@ -1,0 +1,60 @@
+BACKUP ~peacespeaker/backup~
+AUTHOR ~bucketfulofsunshine (BFS)~
+VERSION ~1.0~
+
+ALWAYS
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
+END
+
+BEGIN ~Peacespeaker, The Anti-Violence Sword~
+
+// CamDawg's code for State.ids
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
+
+
+//Creatures//
+// Apprentice
+COPY ~peacespeaker/cre/BFSCWL.cre~ ~override~
+SAY NAME1 ~Twitchy Cowled One~
+SAY NAME2 ~Twitchy Cowled One~
+// Mentor
+COPY ~peacespeaker/cre/BFSCOS.cre~ ~override~
+SAY NAME1 ~Cowled Wizard~
+SAY NAME2 ~Cowled Wizard~
+
+// Dialogues
+COMPILE EVALUATE_BUFFER ~peacespeaker/d/BFSCWL.d~
+        ~peacespeaker/d/BFSCOS.d~
+		~peacespeaker/d/BFSSW.d~
+		
+// Scripts
+EXTEND_TOP ~AR0700.bcs~   ~peacespeaker/scripts/AR0700.baf~
+EXTEND_TOP ~AR1002.bcs~   ~peacespeaker/scripts/AR1002.baf~
+
+// Custom Item
+COPY ~peacespeaker/itm/BFSSW.ITM~ ~override~
+SAY NAME1 ~Peacespeaker~
+SAY NAME2 ~Peacespeaker~
+SAY DESC ~This blade was inexpertly crafted by two apprentices who sought favor with the Cowled Wizards. Trapped within lies the soul of a druid of Eldath. Once per day the wielder may syphon a part of her lingering grace, healing a portion of their wounds during battle.
+
+STATISTICS:
+
+THAC0: +1
+Damage: 1d8+1 (slashing)
+Speed Factor: 4
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 6 Strength
+
+Combat Ability: 
+10% chance per hit of casting Cure Light Wounds on the wielder
+
+Weight: 4~
+
+OUTER_SET label = RESOLVE_STR_REF(~Speak~)		
+		
+APPEND ~ITEMDIAL.2da~
+~BFSSW %label% BFSSW~
+UNLESS ~BFSSW~

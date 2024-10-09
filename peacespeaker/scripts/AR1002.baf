@@ -1,0 +1,7 @@
+IF
+Global("BFSMentorSpawn","AR1002",0)
+THEN
+RESPONSE #100
+CreateCreature("BFSCOS",[840.634],1)
+SetGlobal("BFSMentorSpawn","AR1002",1)
+END

@@ -1,0 +1,78 @@
+IF
+    Delay(125)
+    !CombatCounter(0)
+    OR(6)
+        HasItemEquipedReal("BFSSW",Player1)  
+        HasItemEquipedReal("BFSSW",Player2)  
+        HasItemEquipedReal("BFSSW",Player3)  
+        HasItemEquipedReal("BFSSW",Player4)  
+        HasItemEquipedReal("BFSSW",Player5)  
+        HasItemEquipedReal("BFSSW",Player6)  
+THEN
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",839)  // You deal—I'll cut! Hahaha!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",844)  // Let's see what's inside this one! Yeah!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",849)  // Come get some! Booyah!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",869)  // Choke up, dolt! Your grip's all wrong!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",2308)  // Hands up, kiddies. Who wants to die?!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",2389)  // Mmm-mmm! tastes like chicken!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",4393)  // Sissy fighter! You grab, I'll scratch!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",31659)  // Muwahahaha-ha-ha!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",31660)  // You can't be serious!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",7908)  // Ooo, that'll leave a mark!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",8480)  // Murder! Death! KILL! Murder! Death! KILL! Muhuhahahahahaha!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",9687)  // Who's your daddy?!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",9800)  // We got a gusher!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",10725)  // You talkin' ta ME?!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",11255)  // Some of my finest work!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",12671)  // I'm the best at what I do, and what I do ain't pretty! Hahahahaha!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",31662)  // Yeah! Hit it! Hit it again!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",31663)  // I am invincible! Invincible, I say!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",32426)  // Hey, wouldn't it be cool if you could dual wield me?
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",19304)  // Yoink! Got yer nose!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",19441)  // My brother is a +12 Hackmaster! *snicker*
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",19638)  // I love the smell of daisies in the morning!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",20059)  // Swing harder, swing harder, swing harder!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",20396)  // Bring 'em on! I ain't done!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",20457)  // Oh yeah!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",31658)  // Let's dance!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",34689)  // Kill it! Kill it quick before they're all gone!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",36145)  // Kill, kill, kill! Yeah, cool!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",41815)  // ...and this one's for Grandma, who said I'd never amount to anything more than a butter knife!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",6434)  // Wow! Hot butta!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",6435)  // You feel lucky, punk?
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",6441)  // Oooh, I'm shaking! Hahaha!
+    RESPONSE #10
+        DisplayStringHeadOwner("sw2h14",6442)  // Oooh, throw a coin in that fountain! Hahahahaha!
+END
