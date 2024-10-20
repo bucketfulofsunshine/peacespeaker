@@ -6,8 +6,13 @@ SAY ~Do I look like someone who has time to spare?~
 IF ~~ EXIT
 END
 
+IF ~Global("BFSEmelinaTaskAccepted","GLOBAL",1) !PartyHasItem("BFSSW")~ THEN BFSCOS.notime
+SAY ~Do I look like someone who has time to spare?~
+IF ~~ EXIT
+END
+
 // The quest is started, PC wants to inform the Cowled Wizards of Emelina's existence
-IF ~Global("BFSEmelinaTaskAccepted","GLOBAL",1)~ THEN BFSCOS.theniliedlikealiar
+IF ~Global("BFSEmelinaTaskAccepted","GLOBAL",1) PartyHasItem("BFSSW")~ THEN BFSCOS.theniliedlikealiar
 SAY ~We are tasked with maintaining the lawful practice of magic. Such vigilance is the only means to safeguard Amn and its people. Your... concerns are of the utmost annoya— ah, importance to us. What is it you wish to report?~
 ++ ~You don't seem particularly fond of your duties.~ + BFSCOS.deathandtaxes
 ++ ~An apprentice gave me a magical weapon and specifically bade me not to inform the Cowled Wizards.~ + BFSCOS.rattedout
@@ -38,7 +43,6 @@ SAY ~*Two* apprentices. An enchanted longsword. ...She would not dare! Hand over
 ++ ~Very well. But I expect a reward for my cooperation.~ + BFSCOS.cont
 END
 
-// GIVE COINS TO CHARNAME not implemented yet
 IF ~~ BFSCOS.cont
 SAY ~...~
 = ~Velanna thought she could deceive me? Inconceivable.~
@@ -47,10 +51,9 @@ SAY ~...~
 ++ ~You're really worked up about this.~ + BFSCOS.end
 END
 
-// destroy item hasn't been implemented yet
 IF ~~ BFSCOS.end
 SAY ~I must be off. Excuse me.~
-IF ~~ DO ~SetGlobal("BFSEmelinaTaskAccepted","GLOBAL",2) ActionOverride("BFSCOS",EscapeArea())~ EXIT
+IF ~~ DO ~TakePartyItem("BFSSW") SetGlobal("BFSEmelinaTaskAccepted","GLOBAL",2) GiveGoldForce(1000) ActionOverride("BFSCOS",EscapeArea())~ EXIT
 END 
 
 // Try to inform Brega instead
