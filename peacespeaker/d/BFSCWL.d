@@ -1,3 +1,6 @@
+/* 2024.10.20 Dialogue Completed. 
+2024.10.21 Rewrite / Proofreading completed. */ 
+
 // she is young & clearly inexperienced. this is the first outside person she approached about her situation. she wants to give the blade away so they might revert the binding. 
 // the main choice here is whether to clue the authorities in - knowing their justice is flawed - or letting her escape justice for her actions altogether.
 BEGIN BFSCWL
@@ -136,6 +139,6 @@ END
 IF ~~ BFSCWL.loot
 SAY ~(She pulls out a standard longsword and offers it to you.)~
 = ~I have taken to calling her Peacespeaker - though I suspect she would prefer to speak for herself. Thank you. I might yet have a chance at a normal life after this.~
-IF ~~ DO ~SetGlobal("BFSApprenticeMet","GLOBAL",1) SetGlobal("BFSEmelinaTaskAccepted","GLOBAL",1) GiveItemCreate("BFSSW",Player1,1,0,0) ActionOverride("BFSCWL",EscapeArea())~ EXIT
+IF ~~ DO ~SetGlobal("BFSApprenticeMet","GLOBAL",1) SetGlobal("BFSEmelinaTaskAccepted","GLOBAL",1) GiveItemCreate("BFSSW",Player1,1,0,0) AddJournalEntry(@100001, QUEST) ActionOverride("BFSCWL",EscapeArea())~ EXIT
 END
 

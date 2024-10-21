@@ -1,3 +1,5 @@
+/* 2024.10.20 Dialogue completed - outside of Brega investigation options. No proofreading / rewrites started yet. */ 
+
 BEGIN BFSCOS
 
 // The quest hasn't been started
@@ -53,7 +55,7 @@ END
 
 IF ~~ BFSCOS.end
 SAY ~I must be off. Excuse me.~
-IF ~~ DO ~TakePartyItem("BFSSW") SetGlobal("BFSEmelinaTaskAccepted","GLOBAL",2) GiveGoldForce(1000) ActionOverride("BFSCOS",EscapeArea())~ EXIT
+IF ~~ DO ~AddJournalEntry(@100003, QUEST_DONE) TakePartyItem("BFSSW") DestroyItem("BFSSW") SetGlobal("BFSEmelinaTaskAccepted","GLOBAL",2) GiveGoldForce(2000) AddXPObject(Player1,1000) AddXPObject(Player2,1000) AddXPObject(Player3,1000) AddXPObject(Player4,1000) AddXPObject(Player5,1000) AddXPObject(Player6,1000) ActionOverride("BFSCOS",EscapeArea())~ EXIT
 END 
 
 // Try to inform Brega instead

@@ -1,6 +1,7 @@
 IF
 Global("BFSMentorSpawn","AR1002",0)
 !Global("BFSEmelinaQuiet","GLOBAL",1)
+!Global("BFSEmelinaUmarHills","GLOBAL",2)
 THEN
 RESPONSE #100
 CreateCreature("BFSCOS",[840.634],1)

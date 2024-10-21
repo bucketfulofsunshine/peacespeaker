@@ -1,36 +1,39 @@
-BEGIN BFSSW
+/* 2024.10.21 Dialogue completed outside of the Brega investigation options. Rewrite / Proofreading not started. */ 
 
+BEGIN BFSSW // This weapon is full of it.
+
+// Emelina introduces herself 
 IF ~Global("BFSEmelinaIntro", "GLOBAL", 0)~ THEN BEGIN BFSEM.introductory
 SAY ~May I know the name of my wielder?~
-++ ~I am <CHARNAME>.~ + BFSEM.nameknown
-++ ~Hah! So the sword actually speaks!~ + BFSEM.talkingweaponisfunny
-+ ~Class(Player1,BARD)~ + ~As a bard, I must say, a talking weapon suits me well. Fancy a contest of wits?~ + BFSEM.talkingcontest
+++ ~I am <CHARNAME>.~ + BFSEM.hellocharnameiamsword
+++ ~Hah! So the sword actually speaks!~ + BFSEM.thetrickisgettingittoshutup
++ ~Class(Player1,BARD)~ + ~As a bard, I must say, a talking weapon suits me well. Fancy a contest of wits?~ + BFSEM.contestofwits
 ++ ~I have no interest in a talking weapon. Stay quiet or else.~ + BFSEM.donttalkrude
 END
 
-IF ~~ BFSEM.nameknown
-SAY ~It is a pleasure, <CHARNAME>. My name is Emelina and in life I was a druid. One of the faithful of Eldath. Though my previous wielder has taken to calling me Peacespeaker.~
-+ ~Class(Player1,DRUID_ALL) OR(2) CheckStatGT(Player1,14,WIS) CheckStatGT(Player1,14,INT)~ + ~Eldath, the Goddess of Singing Waters, if my knowledge does not fail me.~ + BFSEM.smartypants
+IF ~~ BFSEM.hellocharnameiamsword
+SAY ~It is a pleasure to meet you, <CHARNAME>. My name is Emelina and in life I was a druid. One of the faithful of Eldath. Though my previous wielder has taken to calling me Peacespeaker.~
++ ~Class(Player1,DRUID_ALL) OR(2) CheckStatGT(Player1,14,WIS) CheckStatGT(Player1,14,INT)~ + ~Eldath, the Goddess of Singing Waters, if memory serves.~ + BFSEM.smartypants
 ++ ~Who is Eldath?~ + BFSEM.eldathwho
 END
 
-IF ~~ BFSEM.talkingweaponisfunny
+IF ~~ BFSEM.thetrickisgettingittoshutup
 SAY ~I have been capable of speech for many years. Even being forged into a blade hasn't robbed me of the ability.~ 
 = ~*sigh* My name is Emelina and in life I was a druid. One of the faithful of Eldath. Though my previous wielder has taken to calling me Peacespeaker.~ 
-+ ~Class(Player1,DRUID_ALL) OR(2) CheckStatGT(Player1,14,WIS) CheckStatGT(Player1,14,INT)~ + ~Eldath, the Goddess of Singing Waters, if my knowledge does not fail me.~ + BFSEM.smartypants
++ ~Class(Player1,DRUID_ALL) OR(2) CheckStatGT(Player1,14,WIS) CheckStatGT(Player1,14,INT)~ + ~Eldath, the Goddess of Singing Waters, if memory serves.~ + BFSEM.smartypants
 ++ ~Who is Eldath?~ + BFSEM.eldathwho
 END
 
-IF ~~ BFSEM.talkingcontest
+IF ~~ BFSEM.contestofwits
 SAY ~I would prefer to avoid conflict altogether. Even the kind waged with words.~
 = ~*sigh* My name is Emelina and in life I was a druid. One of the faithful of Eldath. Though my previous wielder has taken to calling me Peacespeaker.~ 
-+ ~Class(Player1,DRUID_ALL) OR(2) CheckStatGT(Player1,14,WIS) CheckStatGT(Player1,14,INT)~ + ~Eldath, the Goddess of Singing Waters, if my knowledge does not fail me.~ + BFSEM.smartypants
++ ~Class(Player1,DRUID_ALL) OR(2) CheckStatGT(Player1,14,WIS) CheckStatGT(Player1,14,INT)~ + ~Eldath, the Goddess of Singing Waters, if memory serves.~ + BFSEM.smartypants
 ++ ~Who is Eldath?~ + BFSEM.eldathwho
 END
 
 IF  ~~ BFSEM.smartypants
-SAY ~It does not.~
-= ~To those who follow her, she is the gentle mist that follows a warm summer day. The melodic rustle of leaves accompanying a calm breeze. When your heart knows peace then you are close to Eldath.~
+SAY ~Your knowledge does not fail you.~
+= ~To those who follow her, Eldath is the gentle mist that follows a warm summer day. The melodic rustle of leaves accompanying a calm breeze. When your heart knows peace then you are close to Eldath.~
 ++ ~How were you pulled into a blade?~ + BFSEM.CruxoftheMatter
 END
 
@@ -46,7 +49,7 @@ SAY ~I cannot say for certain. I was slipping away, worn down by time and age, m
 ++ ~Wait. You simply *forgive* the apprentice who got you into this predicament?~ + BFSEM.Forgiveness
 + ~Class(Player1,PALADIN)~ + ~I vow that we will free you from this cursed bondage, Emelina.~ + BFSEM.FreedomOath
 ++ ~You were dying? Is it not preferable to exist as you are now, rather than face the uncertainty of death?~ + BFSEM.CurrentState
-++ ~Then how do we revert the spell?~ + BFSEM.RevertSpell
+++ ~Then how do we undo the spell?~ + BFSEM.RevertSpell
 END
 
 IF ~~ BFSEM.CurrentState
@@ -65,54 +68,93 @@ IF ~~ + BFSEM.RevertSpell
 END
 
 IF ~~ BFSEM.RevertSpell
-SAY ~I have given some thought to the matter. Any harm that befalls me is within my goddess' power to undo. Yet my connection to her is faint... weakened. I cannot commune with Eldath. Not within the confines of this city - steeped in violence and unrest. And, within this form, my reach is further limited.~
+SAY ~I have given some thought to the matter. Any harm that befalls me is within my goddess' power to revert. Yet my connection to her is faint... weakened. I cannot commune with Eldath. Not within the confines of this city - steeped in violence and unrest. And, within this form, my reach is further limited.~
 = ~There is a small town, known as Imnesvale, held sacred by rangers and druids alike. Eldath's presence is strong there. If you would guide me there, I may call upon my goddess, and she will hear my prayers.~
 ++ ~I will do as you suggest.~ + BFSEM.ImnesvaleAccepted
 ++ ~I have no intention of taking you anywhere. The Cowled Wizards must learn of this deception.~ + BFSEM.CowledRatty
-// the option that lets you speak with Brega and investigate
-// aka version 2.0 of peacespeaker
-++ ~While I sympathise with your plight, this injustice cannot go unanswered. If the Cowled Wizards are not held to account for their actions, others may suffer the same fate. We have to report this to Amn's authorities.~ + BFSEM.LawfulPath
+/* The option that lets you speak with Brega and investigate aka version 2.0 of Peacespeaker. */
+// ++ ~While I sympathise with your plight, this injustice cannot go unanswered. If the Cowled Wizards are not held to account for their actions, others may suffer the same fate. We have to report this to Amn's authorities.~ + BFSEM.LawfulPath
 ++ ~I require a weapon but I have no interest in conversing with you further.~ + BFSEM.EldathTrial
 END
 
 IF ~~ BFSEM.ImnesvaleAccepted
 SAY ~I cannot begin to express the depths of my gratitude.~
-~There is another matter. As a druid of Eldath, I have taken vows to avoid violence. Yet a sheathed blade may not serve *you*. It may even lead to your death. I ask that, if you must draw me, do so only in moments of great need.~
-IF ~~ DO ~SetGlobal("BFSEmelinaIntro","GLOBAL",1)~ EXIT
+~There is another matter. As a druid of Eldath, I have taken vows to avoid violence. Yet a sheathed blade may not serve you. I ask that, if you must draw me, to do so only in moments of great need.~
+= ~With my soul bound to the blade, a portion of my healing powers remain. May they add you in our shared cause.~
+IF ~~ DO ~SetGlobal("BFSEmelinaIntro","GLOBAL",1) EraseJournalEntry(@100001) AddJournalEntry(@100002, QUEST)~ EXIT
 END
 
 IF ~~ BFSEM.CowledRatty
 SAY ~I only ask that you consider my solution.~
-IF ~~ DO ~SetGlobal("BFSEmelinaIntro","GLOBAL",1)~ EXIT
+~There is another matter. As a druid of Eldath, I have taken vows to avoid violence. Yet a sheathed blade may not serve you. I ask that, if you must draw me, to do so only in moments of great need.~
+= ~With my soul bound to the blade, a portion of my healing powers remain. May they add you in our shared cause.~
+IF ~~ DO ~SetGlobal("BFSEmelinaIntro","GLOBAL",1) EraseJournalEntry(@100001) AddJournalEntry(@100002, QUEST)~ EXIT
 END
 
-IF ~~ BFSEM.LawfulPath
+/*IF ~~ BFSEM.LawfulPath
 SAY ~I would not wish this fate upon another. If you believe this to be the best course...~
 = ~Then I will aid you as best I can.~ 
-IF ~~ DO ~SetGlobal("BFSEmelinaIntro","GLOBAL",1)~ EXIT
-END
+IF ~~ DO ~SetGlobal("BFSEmelinaIntro","GLOBAL",1) EraseJournalEntry(@100001) AddJournalEntry(@100002, QUEST)~ EXIT
+END */
 
-// she goes quiet for good. hoping she might find a peaceful solution WAY down the line with someone else
+// She goes quiet for good after this. Hoping she might find a peaceful solution WAY down the line. With someone else. 
+// Change to normal longsword, no longer conversable.
 IF ~~ BFSEM.EldathTrial
 SAY ~Then I will bide my time. Perhaps I may exchange hands with another wielder yet.~ 
 = ~I accept your trial, Eldath, and I will endure as long as I must.~
-IF ~~ DO ~SetGlobal("BFSEmelinaQuiet","GLOBAL",1) SetGlobal("BFSEmelinaIntro","GLOBAL",1) TakePartyItem("BFSSW") GiveItemCreate("BFSS2",Player1,1,0,0)~ EXIT
+IF ~~ DO ~SetGlobal("BFSEmelinaQuiet","GLOBAL",1) SetGlobal("BFSEmelinaIntro","GLOBAL",1) TransformItem("BFSSW","BFSS2") EraseJournalEntry(@100001) AddJournalEntry(@100004, QUEST_DONE)~ EXIT
 END
 
-// change to normal longsword, no longer conversable 
+// Enjoy your free loot I guess. Peacespeaker.exe is uninstalled.
+// Change to normal longsword, no longer conversable.
 IF ~~ BFSEM.donttalkrude
 SAY ~As you command.~
-IF ~~ DO ~SetGlobal("BFSEmelinaQuiet","GLOBAL",1) SetGlobal("BFSEmelinaIntro","GLOBAL",1) TakePartyItem("BFSSW") GiveItemCreate("BFSS2",Player1,1,0,0)~ EXIT
+IF ~~ DO ~SetGlobal("BFSEmelinaQuiet","GLOBAL",1) SetGlobal("BFSEmelinaIntro","GLOBAL",1) TransformItem("BFSSW","BFSS2") EraseJournalEntry(@100001) AddJournalEntry(@100004, QUEST_DONE)~ EXIT
 END
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// this is emelina's main DIALOGUE HUB
+// Emelina's Dialogue in the Umar Hills / Imnesvale - QUEST END 
+IF ~Global("BFSEmelinaUmarHills", "GLOBAL", 1)~ THEN BEGIN BFSEM.imnessolution
+SAY ~I can feel Eldath's soothing presence here. I suspect, once I start my prayers, there will be no further chance to speak with you.~ 
+= ~Thank you for my helping me to regain my freedom.~
++ ~Global("BFSLineageKnown","GLOBAL",1)~ + ~You're welcome, Emelina.~ + BFSEM.BhaalspawnReward
++  ~!Global("BFSLineageKnown","GLOBAL",1)~  + ~You're welcome, Emelina.~ + BFSEM.NormalReward
++ ~Global("BFSLineageKnown","GLOBAL",1)~ + ~I just hope there's a decent reward at the end of this.~ + BFSEM.BhaalspawnReward
++ ~!Global("BFSLineageKnown","GLOBAL",1)~ + ~I just hope there's a decent reward at the end of this.~ + BFSEM.NormalReward
+END
+
+IF ~~ BFSEM.BhaalspawnReward 
+SAY ~While your path may be paved with blood, the stones laid down by those who came before you, you continue to choose kindness. To choose mercy when possible. I'm certain the goddess will smile upon you.~ 
+= ~I wish you peace, <CHARNAME>, at the end of your long road. If that is something that you wish for yourself.~ 
+IF ~~ + BFSEM.EldathPrayer
+END
+
+IF ~~ BFSEM.NormalReward
+SAY ~I wish you peace on the road ahead, <CHARNAME>. If that is something that you wish for yourself.~ 
+IF ~~ + BFSEM.EldathPrayer
+END
+
+IF ~~ BFSEM.EldathPrayer
+SAY ~Gentle Eldath, hear my plea 
+My soul, bound and tethered, longs for release.
+Unbind me from this shell,
+And let me flow back to your peaceful embrace.~
+IF ~~ DO ~TransformItem("BFSSW","BFSSU") AddXPObject(Player1,5000) AddXPObject(Player2,5000) AddXPObject(Player3,5000) AddXPObject(Player4,5000) AddXPObject(Player5,5000) AddXPObject(Player6,5000) SetGlobal("BFSEmelinaUmarHills","GLOBAL",2) EraseJournalEntry(@100005) AddJournalEntry(@100006, QUEST_DONE)~ EXIT
+END
+
+/////////////////////////////////////////
+//                                     //
+// this is emelina's main DIALOGUE HUB //
+//                                     //
+/////////////////////////////////////////
+
+// Player will encounter this line a lot. Every time they talk to her hereafter. Keep it simple. 
+/* Expand with more questions & dialogues in version 2 */
 IF ~Global("BFSEmelinaIntro", "GLOBAL", 1)~ THEN BEGIN BFSEM.mainhub
-SAY ~Ah, <CHARNAME>, it brings me great joy to speak with you.~
-++ ~May I ask a few questions?~ + BFSEM.questionhub
+SAY ~I'm pleased to speak with you, <CHARNAME>. I do prefer conversation over conflict.~
++ ~Global("BFSPastLife", "GLOBAL", 0)~ + ~What was your life like before?~ + BFSEM.pastlife
 + ~Global("BFSLineageKnown", "GLOBAL", 0)~ + ~I have a confession to make... I am a Bhaalspawn, a child of the Lord of Murder.~ + BFSEM.bhaalspawn
-// ++ ~Emelina, do you know where I can start my investigation?~ + BFSEM.investigationapproach
-// + ~AreaCheck("AR1100")~ + ~We've arrived in Imnesvale. What is our next step?~ + BFSEM.imnesvaleapproach
+// ++ ~Emelina, do you know where I can start my investigation into the Cowled Wizard affairs?~ + BFSEM.investigationapproach
++ ~AreaCheck("AR1100")~ + ~We've arrived in Imnesvale. What is our next step?~ + BFSEM.imnesvaleapproach
 ++ ~That is all for now.~ + BFSEM.convoexit
 END
 
@@ -148,24 +190,16 @@ SAY ~I don't know why you felt the need to share your secret but I am grateful y
 IF ~~ DO ~SetGlobal("BFSLineageKnown","GLOBAL",1)~ EXIT
 END
 
-IF ~~ BFSEM.questionhub
-SAY ~Of course. I prefer conversation over conflict.~
-+ ~Global("BFSPastLife", "GLOBAL", 0)~ + ~What was your life like before all this?~ + BFSEM.pastlife
-++ ~I have no further questions.~ + BFSEM.convoexit
-END
-
 IF ~~ BFSEM.pastlife
-SAY ~Quiet and serene. My days began in peaceful meditation, and when the sun shone high, we would tend to the needs of the land. By nightfall we would gather around a campfire, sharing stories, laughter, and a drink among friends.~
-~It was a life full of contentment. One I look back on with warmth.~
+SAY ~Quiet and serene. My days began in peaceful meditation, and when the sun rose high, we would tend to the needs of the land. By nightfall we would gather around a campfire, sharing stories, laughter and drinks among friends.~
+~My life was one full of contentment. I look back on with warmth.~
 IF ~~ DO ~SetGlobal("BFSPastLife","GLOBAL",1)~ EXIT
 END
 
-/* cutscene to near water
- finish dialogue there
 IF ~~ BFSEM.imnesvaleapproach
 SAY ~What I'm about to suggest may sound unusual. But I ask that you escort me to a river and lower me into its waters.~
-IF ~~ EXIT
-END */ 
+IF ~~ THEN DO ~ClearAllActions() StartCutSceneMode() StartCutScene("BFSImn")~ EXIT
+END
 
 // IF ~~ BFSEM.investigationapproach
 // SAY ~In my current form I perceive only vague impressions. But I recall the sound of waves breaking against stone. Wood creaking under its own weight, carried across a vast body of water. Perhaps we seek a harbour of sorts?~

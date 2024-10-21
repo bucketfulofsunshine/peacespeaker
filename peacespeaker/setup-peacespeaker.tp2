@@ -6,12 +6,20 @@ ALWAYS
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
 END
 
+AUTO_TRA ~peacespeaker/translations/%s~ 
+
+
+LANGUAGE ~English~
+         ~english~   
+         ~peacespeaker/translations/english/JournalEntries.tra~
+
 BEGIN ~Peacespeaker, The Anti-Violence Sword~
 
 // CamDawg's code for State.ids
 APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
 UNLESS ~CD_STATE_NOTVALID~
 
+ADD_JOURNAL TITLE (@100000) @100001 @100002 USING ~peacespeaker/translations/english/JournalEntries.tra~ 
 
 //Creatures//
 // Apprentice
@@ -32,10 +40,13 @@ COMPILE EVALUATE_BUFFER ~peacespeaker/d/BFSCWL.d~
 EXTEND_TOP ~AR0700.bcs~   ~peacespeaker/scripts/AR0700.baf~
 EXTEND_TOP ~AR1002.bcs~   ~peacespeaker/scripts/AR1002.baf~
 
-// Custom Item
+COMPILE	EVALUATE_BUFFER ~peacespeaker/scripts/BFSIMN.baf~
+
+// Custom Items
+// Peacespeaker Base Form
 COPY ~peacespeaker/itm/BFSSW.ITM~ ~override~
 SAY 0x0c ~Peacespeaker~
-SAY 0x54 ~This blade was inexpertly crafted by two apprentices who sought favor with the Cowled Wizards. Trapped within lies the soul of a druid of Eldath. Once per day the wielder may syphon a part of her lingering grace, healing a portion of their wounds during battle.
+SAY 0x54 ~This blade was crafted by two apprentices who sought favor with the Cowled Wizards. Trapped within lies the soul of a druid of Eldath. Occasionally, on a successful attack, the wielder may syphon a part of her lingering grace, healing a portion of their wounds during battle.
 
 STATISTICS:
 
@@ -48,12 +59,13 @@ Requires:
  6 Strength
 
 Combat Ability: 
-10% chance per hit of casting Cure Medium Wounds on the Wielder
+– 10% chance per hit of casting Cure Medium Wounds on the Wielder
 
 Weight: 4~
 
+// Peacespeaker Base Form, Emelina isn't conversable, quest isn't being pursued
 COPY ~peacespeaker/itm/BFSS2.ITM~ ~override~
-SAY 0x0c ~Longsword +1~
+SAY 0x0c ~Peacespeaker +1~
 SAY 0x54 ~A common longsword imbued with the ability to occasionally cast Cure Medium Wounds on a successful attack.
 
 STATISTICS:
@@ -67,7 +79,29 @@ Requires:
  6 Strength
 
 Combat Ability: 
-10% chance per hit of casting Cure Light Wounds on the Wielder
+– 10% chance per hit of casting Cure Medium Wounds on the Wielder
+
+Weight: 4~
+
+// Peacespeaker Upgraded Form, Emelina's quest is completed
+COPY ~peacespeaker/itm/BFSSU.ITM~ ~override~
+SAY 0x0c ~Healing Light +3~
+SAY 0x54 ~In gratitude for returning Emelina's soul to the fold, Eldath has enchanted the blade known formerly as Peacespeaker further. The healing magic contained within is even stronger. 
+
+Edges along the hilt, in softly cursive script, reads: healing light. 
+
+STATISTICS:
+
+THAC0: +3
+Damage: 1d8+3 (slashing)
+Speed Factor: 2
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 6 Strength
+
+Combat Ability: 
+– 10% chance per hit of casting Cure Critical Wounds on the Wielder
 
 Weight: 4~
 
