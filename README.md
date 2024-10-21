@@ -16,7 +16,7 @@ A: An option to work with Inspector Brega and investigate / gather evidence. The
 
 ### Q: Is this mod compatible with EET?
 
-A: Unfortunately, no. I check a chapter variable from the base BG2EE game - necessary adjustments for EET haven't been made. Since this mod won't see much traffic, I haven’t prioritized that. Especially as I don't use EET myself.
+A: Unfortunately, no, I check a chapter variable from the base BG2EE game - necessary adjustments for EET haven't been made. Since this mod won't see much traffic, I haven’t prioritized the changes. Especially as I don't use EET myself.
 
 
 ### Q: How do I report bugs or suggest improvements?
@@ -31,9 +31,4 @@ A: Even in death I serve the Omnissiah! :3
 
 ## CHANGELOG
 
-* 1.0 - Initial Release.
-
-
-## CREDITS
-
-* Thor Thunderfist & Cosmic Runebear (RoyalProtector) - For their help with my dumb item-related questions on Discord.
+* 1.0 - Initial Release. Investigation branch not available. 
