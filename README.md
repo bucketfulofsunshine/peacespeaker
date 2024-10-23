@@ -27,10 +27,6 @@ A: Unfortunately, no, I check a chapter variable from the base BG2EE game - nece
 
 A: This is my first released quest mod. I've no doubt many inconsistencies and bugs are present. Please contact me and I'll fix things up (with credit & thanks). <3
 
-### Q: What bugs are currently known?
-
-A: Peacespeaker is usable by every class combination. Literally. I intend to revert that once I figure out how to make the sword *conversable* for everyone regardless of class. 
-
 ### Q: The flesh is weak?
 
 A: Even in death I serve the Omnissiah! :3
@@ -39,7 +35,7 @@ A: Even in death I serve the Omnissiah! :3
 ## CHANGELOG
 
 * 1.0 - Initial Release. Investigation branch not available.
-* 1.1 - Fixed Peacespeaker's usability. Added combat and not-combat barks. Added a dialogue if the player also has Lilarcor in their inventory.  
+* 1.1 - Fixed Peacespeaker's usability. Added combat and none-combat barks. Added a dialogue if the player also has Lilarcor in their inventory.  
 
 ## LICENSING
 
