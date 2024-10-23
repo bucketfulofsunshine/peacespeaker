@@ -38,7 +38,8 @@ A: Even in death I serve the Omnissiah! :3
 
 ## CHANGELOG
 
-* 1.0 - Initial Release. Investigation branch not available. 
+* 1.0 - Initial Release. Investigation branch not available.
+* 1.1 - Fixed Peacespeaker's usability. Added combat and not-combat barks. Added a dialogue if the player also has Lilarcor in their inventory.  
 
 ## LICENSING
 
