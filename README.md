@@ -4,6 +4,10 @@ Embark on a short quest featuring a sentient sword, an apprentice who's in WAAAY
 
 ## FAQ
 
+### Q: Where can I start the quest?
+
+A: Explore Waukeen's Promenade after escaping Irenicus' Dungeon. If you leave the Promenade before speaking with the Twitchy Cowled One, then the quest can't be started. 
+
 ### Q: Will this be TRA-ified?
 
 A: I have no plans for it at present. If someone is interested in translating, reach out to me on Discord (bucketfulofsunshine). Otherwise the mod will remain in its current form (outside of content updates & bug fixes).
