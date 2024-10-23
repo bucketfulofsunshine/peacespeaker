@@ -1,8 +1,9 @@
 /* 2024.10.20 Dialogue Completed. 
 2024.10.21 Rewrite / Proofreading completed. */ 
 
-// she is young & clearly inexperienced. this is the first outside person she approached about her situation. she wants to give the blade away so they might revert the binding. 
-// the main choice here is whether to clue the authorities in - knowing their justice is flawed - or letting her escape justice for her actions altogether.
+/* she is young & clearly inexperienced. this is the first outside person she approached about her situation. she wants to give the blade away so they might revert the binding. 
+the main choice here is whether to clue the authorities in - knowing their justice is flawed - or letting her escape justice for her actions altogether. 
+there is a third option, inspector brega, but that shouldn't be clear from the start - as that's the TRUE ENDING path */
 BEGIN BFSCWL
 
 IF ~Global("BFSApprenticeMet","GLOBAL",0)~ THEN BFSCWL.intro
@@ -47,8 +48,8 @@ SAY ~Then you may understand the urgency of my plight. Will you hear me out?~
 ++ ~On second thought, I'm not interested.~ + BFSCWL.notinterested
 END
 
-// peacespeaker.exe has been uninstalled
-// she YEETS herself out of there
+/* peacespeaker.exe has been uninstalled
+she YEETS herself out of there */
 IF ~~ BFSCWL.notinterested
 SAY ~...Oh. Well, uh, then we never had this conversation.~
 IF ~~ DO ~SetGlobal("BFSApprenticeMet","GLOBAL",1) ActionOverride("BFSCWL",EscapeArea())~ EXIT
@@ -61,7 +62,7 @@ SAY ~Nervous? Me? No, no, it's nothing. Truly.~
 ++ ~On second thought, I'm not interested.~ + BFSCWL.notinterested
 END
 
-// she done goofed and offers up a quest 
+/* she done goofed and offers up a quest */ 
 IF ~~ BFSCWL.quest
 SAY ~Thank you. Until recently, I was apprenticed to one of the Cowled Wizards, charged with crafting a magical weapon...~
 ++ ~My sister, Imoen, was taken by them! Tell me where she is!~ + BFSCWL.gimmedeets
@@ -134,8 +135,8 @@ SAY ~If... if you believe that is what must be done. I will not try stop you. I 
 IF ~~ + BFSCWL.loot
 END
 
-// good job CHARNAME you are now an accomplice unless you tell the Cowled Wizards
-// you won't do that, will you? :D
+/* good job CHARNAME you are now an accomplice unless you tell the Cowled Wizards
+you won't do that, will you? */ 
 IF ~~ BFSCWL.loot
 SAY ~(She pulls out a standard longsword and offers it to you.)~
 = ~I have taken to calling her Peacespeaker - though I suspect she would prefer to speak for herself. Thank you. I might yet have a chance at a normal life after this.~

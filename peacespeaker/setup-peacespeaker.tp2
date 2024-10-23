@@ -21,6 +21,9 @@ UNLESS ~CD_STATE_NOTVALID~
 
 ADD_JOURNAL TITLE (@100000) @100001 @100002 USING ~peacespeaker/translations/english/JournalEntries.tra~ 
 
+// Bams
+COPY ~peacespeaker/bam~ ~override~
+
 //Creatures//
 // Apprentice
 COPY ~peacespeaker/cre/BFSCWL.cre~ ~override~
@@ -40,15 +43,24 @@ COMPILE EVALUATE_BUFFER ~peacespeaker/d/BFSCWL.d~
 EXTEND_TOP ~AR0700.bcs~   ~peacespeaker/scripts/AR0700.baf~
 EXTEND_TOP ~AR1002.bcs~   ~peacespeaker/scripts/AR1002.baf~
 
+EXTEND_BOTTOM ~baldur.bcs~ ~peacespeaker/scripts/baldur.baf~ 
+USING ~peacespeaker/translations/english/WeaponStrings.tra~
+
 COMPILE	EVALUATE_BUFFER ~peacespeaker/scripts/BFSIMN.baf~
 
 // Custom Items
 // Peacespeaker Base Form
 COPY ~peacespeaker/itm/BFSSW.ITM~ ~override~
 SAY 0x0c ~Peacespeaker~
-SAY 0x54 ~This blade was crafted by two apprentices who sought favor with the Cowled Wizards. Trapped within lies the soul of a druid of Eldath. Occasionally, on a successful attack, the wielder may syphon a part of her lingering grace, healing a portion of their wounds during battle.
+SAY 0x54 ~This crudely-crafted blade bears the mark of two unskilled apprentices. While the exterior is basic in form, and offers no hint to its power, trapped within lies the soul of a druid of Eldath. Occasionally, on a successful attack, the wielder may syphon part of her remaining powers - recovering a portion of their health.
+
+Though lacking in raw offensive power, Peacespeaker offers powerful protective and healing magic.
 
 STATISTICS:
+
+Combat Ability: 
+– 40% chance per hit of casting Cure Medium Wounds on the wielder
+– +20% resistance to slashing, piercing, and crushing damage
 
 THAC0: +1
 Damage: 1d8+1 (slashing)
@@ -57,18 +69,19 @@ Proficiency Type: Long Sword
 Type: One-handed
 Requires:
  6 Strength
-
-Combat Ability: 
-– 10% chance per hit of casting Cure Medium Wounds on the Wielder
 
 Weight: 4~
 
 // Peacespeaker Base Form, Emelina isn't conversable, quest isn't being pursued
 COPY ~peacespeaker/itm/BFSS2.ITM~ ~override~
-SAY 0x0c ~Peacespeaker +1~
-SAY 0x54 ~A common longsword imbued with the ability to occasionally cast Cure Medium Wounds on a successful attack.
+SAY 0x0c ~Peacespeaker~
+SAY 0x54 ~A crudely-crafted longsword imbued with the ability to occasionally cast Cure Medium Wounds on a successful attack.
 
 STATISTICS:
+
+Combat Ability: 
+– 40% chance per hit of casting Cure Medium Wounds on the wielder
+– +20% resistance to slashing, piercing, and crushing damage
 
 THAC0: +1
 Damage: 1d8+1 (slashing)
@@ -78,19 +91,20 @@ Type: One-handed
 Requires:
  6 Strength
 
-Combat Ability: 
-– 10% chance per hit of casting Cure Medium Wounds on the Wielder
-
 Weight: 4~
 
 // Peacespeaker Upgraded Form, Emelina's quest is completed
 COPY ~peacespeaker/itm/BFSSU.ITM~ ~override~
-SAY 0x0c ~Healing Light +3~
-SAY 0x54 ~In gratitude for returning Emelina's soul to the fold, Eldath has enchanted the blade known formerly as Peacespeaker further. The healing magic contained within is even stronger. 
+SAY 0x0c ~Peacespeaker~
+SAY 0x54 ~In gratitude for returning Emelina's soul to the fold, Eldath has enchanted the blade known as Peacespeaker even further. The healing magic contained within is stronger and responds more frequently. 
 
-Edges along the hilt, in softly cursive script, reads: healing light. 
+Though still lacking in raw offensive power, Peacespeaker offers powerful protective and healing magic.
 
 STATISTICS:
+
+Combat Ability: 
+– 50% chance per hit of casting Cure Critical Wounds on the wielder
+– +20% resistance to slashing, piercing, and crushing damage
 
 THAC0: +3
 Damage: 1d8+3 (slashing)
@@ -99,9 +113,6 @@ Proficiency Type: Long Sword
 Type: One-handed
 Requires:
  6 Strength
-
-Combat Ability: 
-– 10% chance per hit of casting Cure Critical Wounds on the Wielder
 
 Weight: 4~
 

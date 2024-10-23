@@ -1,6 +1,7 @@
 /* 2024.10.20 Dialogue completed - outside of Brega investigation options. No proofreading / rewrites started yet. */ 
 
 BEGIN BFSCOS
+/* Grumpy Wizard is grumpy. */ 
 
 // The quest hasn't been started
 IF ~!Global("BFSEmelinaTaskAccepted","GLOBAL",1)~ THEN BFSCOS.notime

@@ -2,7 +2,7 @@
 
 BEGIN BFSSW // This weapon is full of it.
 
-// Emelina introduces herself 
+/* Emelina introduces herself and offers a possible solution */
 IF ~Global("BFSEmelinaIntro", "GLOBAL", 0)~ THEN BEGIN BFSEM.introductory
 SAY ~May I know the name of my wielder?~
 ++ ~I am <CHARNAME>.~ + BFSEM.hellocharnameiamsword
@@ -97,22 +97,63 @@ SAY ~I would not wish this fate upon another. If you believe this to be the best
 IF ~~ DO ~SetGlobal("BFSEmelinaIntro","GLOBAL",1) EraseJournalEntry(@100001) AddJournalEntry(@100002, QUEST)~ EXIT
 END */
 
-// She goes quiet for good after this. Hoping she might find a peaceful solution WAY down the line. With someone else. 
-// Change to normal longsword, no longer conversable.
+/* She goes quiet for good after this. Hoping she might find a peaceful solution WAY down the line. With someone else. 
+Change to normal longsword, no longer conversable. */
 IF ~~ BFSEM.EldathTrial
 SAY ~Then I will bide my time. Perhaps I may exchange hands with another wielder yet.~ 
 = ~I accept your trial, Eldath, and I will endure as long as I must.~
 IF ~~ DO ~SetGlobal("BFSEmelinaQuiet","GLOBAL",1) SetGlobal("BFSEmelinaIntro","GLOBAL",1) TransformItem("BFSSW","BFSS2") EraseJournalEntry(@100001) AddJournalEntry(@100004, QUEST_DONE)~ EXIT
 END
 
-// Enjoy your free loot I guess. Peacespeaker.exe is uninstalled.
-// Change to normal longsword, no longer conversable.
+/* Enjoy your free loot I guess. Peacespeaker.exe is uninstalled.
+Change to normal longsword, no longer conversable. */
 IF ~~ BFSEM.donttalkrude
 SAY ~As you command.~
 IF ~~ DO ~SetGlobal("BFSEmelinaQuiet","GLOBAL",1) SetGlobal("BFSEmelinaIntro","GLOBAL",1) TransformItem("BFSSW","BFSS2") EraseJournalEntry(@100001) AddJournalEntry(@100004, QUEST_DONE)~ EXIT
 END
 
-// Emelina's Dialogue in the Umar Hills / Imnesvale - QUEST END 
+/////////////////////////////////////////
+//                                     //
+//      Scenery & Quest Dialogue       //
+//                                     //
+///////////////////////////////////////// 
+
+/* Player also has Lilarcor in their inventory
+Emelina thinks this is a special kind of hell. */
+IF ~Global("BFSEmelinaLilarcor","GLOBAL",0) PartyHasItem("SW2H14")~ THEN BEGIN BFSEM.LilarcorTalk
+SAY ~I have never felt this opposed to another being in my entire existence.~
+= ~Lilarcor's bloodlust leaves me ill-at-ease. Though, at least, one of us seems to enjoy our current predicament. After all - what is a sword good for if not to shed blood?~ 
+++ ~You can say *violently* opposed, you know?~ + BFSEM.LilViolentlyOpposed
+++ ~You two seem to be polar opposites.~ + BFSEM.LilOpposites
+++ ~Lilarcor is an acquired taste, I admit.~ + BFSEM.LilIsAPersonality
+++ ~You are more than a simple sword, Emelina.~ + BFSEM.LilComfort
+END
+
+IF ~~ BFSEM.LilComfort
+SAY ~And yet, in my current state, the best assistance I can offer is to harm those who would harm you. *sigh*~
+= ~But I thank you for your words, <CHARNAME>, and I take them to heart.~ 
+IF ~~ + BFSEM.LilIsAPersonality 
+END
+
+
+IF ~~ BFSEM.LilViolentlyOpposed
+SAY ~I thank you for the suggestion - but I refuse.~ 
+IF ~~ + BFSEM.LilIsAPersonality
+END
+
+IF ~~ BFSEM.LilIsAPersonality
+SAY ~I worry, with the kind of trouble you get into, that Lilarcor's desire for battle will only grow. That it will become increasingly more unstable.~
+= ~Eldath knows, if I spent several hundred years entrapped in this form, *I* might second guess my pacifist nature. Please don't let it come to that, <CHARNAME>.~
+IF ~~ DO ~SetGlobal("BFSEmelinaLilarcor","GLOBAL",1)~ EXIT
+END
+
+IF ~~ BFSEM.LilOpposites
+SAY ~To my knowledge sentient weapons are quite rare. Even if the people who hear their weapons speaking to them can be …let's just say higher in number.~
+= ~That I find myself in the company of one like myself should be pleasant - if Lilarcor showed the slightest degree of remorse or decorum. But I digress.~
+IF ~~ + BFSEM.LilIsAPersonality
+END
+
+/* Emelina's Dialogue in the Umar Hills / Imnesvale - QUEST END THREE */ 
 IF ~Global("BFSEmelinaUmarHills", "GLOBAL", 1)~ THEN BEGIN BFSEM.imnessolution
 SAY ~I can feel Eldath's soothing presence here. I suspect, once I start my prayers, there will be no further chance to speak with you.~ 
 = ~Thank you for my helping me to regain my freedom.~
@@ -138,17 +179,18 @@ SAY ~Gentle Eldath, hear my plea
 My soul, bound and tethered, longs for release.
 Unbind me from this shell,
 And let me flow back to your peaceful embrace.~
+// Add Magic healing effect here 
 IF ~~ DO ~TransformItem("BFSSW","BFSSU") AddXPObject(Player1,5000) AddXPObject(Player2,5000) AddXPObject(Player3,5000) AddXPObject(Player4,5000) AddXPObject(Player5,5000) AddXPObject(Player6,5000) SetGlobal("BFSEmelinaUmarHills","GLOBAL",2) EraseJournalEntry(@100005) AddJournalEntry(@100006, QUEST_DONE)~ EXIT
 END
 
 /////////////////////////////////////////
 //                                     //
-// this is emelina's main DIALOGUE HUB //
+//        Main Dialogue Hub            //
 //                                     //
 /////////////////////////////////////////
 
-// Player will encounter this line a lot. Every time they talk to her hereafter. Keep it simple. 
-/* Expand with more questions & dialogues in version 2 */
+/* The Player will encounter this line whenever they speak with Emelina. Keep it simple. */ 
+/* Expand with more questions & dialogues in version 2.0 */
 IF ~Global("BFSEmelinaIntro", "GLOBAL", 1)~ THEN BEGIN BFSEM.mainhub
 SAY ~I'm pleased to speak with you, <CHARNAME>. I do prefer conversation over conflict.~
 + ~Global("BFSPastLife", "GLOBAL", 0)~ + ~What was your life like before?~ + BFSEM.pastlife

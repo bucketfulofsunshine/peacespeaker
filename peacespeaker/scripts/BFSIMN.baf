@@ -1,3 +1,4 @@
+// Imnesvale Solution Started 
 IF
 True()
 THEN
@@ -18,4 +19,5 @@ EraseJournalEntry(@100002)
 AddJournalEntry(@100005, QUEST)
 EndCutsceneMode()
 END
+
 
