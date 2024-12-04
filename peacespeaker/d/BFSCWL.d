@@ -138,8 +138,7 @@ END
 /* good job CHARNAME you are now an accomplice unless you tell the Cowled Wizards
 you won't do that, will you? */ 
 IF ~~ BFSCWL.loot
-SAY ~(She pulls out a standard longsword and offers it to you.)~
-= ~I have taken to calling her Peacespeaker - though I suspect she would prefer to speak for herself. Thank you. I might yet have a chance at a normal life after this.~
-IF ~~ DO ~SetGlobal("BFSApprenticeMet","GLOBAL",1) SetGlobal("BFSEmelinaTaskAccepted","GLOBAL",1) GiveItemCreate("BFSSW",Player1,1,0,0) AddJournalEntry(@100001, QUEST) ActionOverride("BFSCWL",EscapeArea())~ EXIT
+SAY ~I have taken to calling her Peacespeaker - though I suspect she would prefer to speak for herself. Thank you. I might yet have a chance at a normal life after this.~
+IF ~~ DO ~SetGlobal("BFSApprenticeMet","GLOBAL",1) SetGlobal("BFSEmelinaTaskAccepted","GLOBAL",1) GiveItemCreate("BFSSW",Player1,1,0,0) AddJournalEntry(@100001, QUEST) EscapeArea()~ EXIT
 END
 

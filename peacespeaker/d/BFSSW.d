@@ -180,7 +180,7 @@ My soul, bound and tethered, longs for release.
 Unbind me from this shell,
 And let me flow back to your peaceful embrace.~
 // Add Magic healing effect here 
-IF ~~ DO ~TransformItem("BFSSW","BFSSU") AddXPObject(Player1,5000) AddXPObject(Player2,5000) AddXPObject(Player3,5000) AddXPObject(Player4,5000) AddXPObject(Player5,5000) AddXPObject(Player6,5000) SetGlobal("BFSEmelinaUmarHills","GLOBAL",2) EraseJournalEntry(@100005) AddJournalEntry(@100006, QUEST_DONE)~ EXIT
+IF ~~ DO ~CreateVisualEffectObject("SPHEALIN",Player1) TransformItem("BFSSW","BFSSU") AddXPObject(Player1,5000) AddXPObject(Player2,5000) AddXPObject(Player3,5000) AddXPObject(Player4,5000) AddXPObject(Player5,5000) AddXPObject(Player6,5000) SetGlobal("BFSEmelinaUmarHills","GLOBAL",2) EraseJournalEntry(@100005) AddJournalEntry(@100006, QUEST_DONE)~ EXIT
 END
 
 /////////////////////////////////////////
@@ -195,7 +195,7 @@ IF ~Global("BFSEmelinaIntro", "GLOBAL", 1)~ THEN BEGIN BFSEM.mainhub
 SAY ~I'm pleased to speak with you, <CHARNAME>. I do prefer conversation over conflict.~
 + ~Global("BFSPastLife", "GLOBAL", 0)~ + ~What was your life like before?~ + BFSEM.pastlife
 + ~Global("BFSLineageKnown", "GLOBAL", 0)~ + ~I have a confession to make... I am a Bhaalspawn, a child of the Lord of Murder.~ + BFSEM.bhaalspawn
-// ++ ~Emelina, do you know where I can start my investigation into the Cowled Wizard affairs?~ + BFSEM.investigationapproach
++ ~Global("BFSBregaInformed","GLOBAL",1) Global("BFSEmelinaDocksSuggestion","GLOBAL",0)~ + ~Emelina, do you know where I can start my investigation into the Cowled Wizard affairs?~ + BFSEM.investigationapproach
 + ~AreaCheck("AR1100")~ + ~We've arrived in Imnesvale. What is our next step?~ + BFSEM.imnesvaleapproach
 ++ ~That is all for now.~ + BFSEM.convoexit
 END
@@ -243,7 +243,13 @@ SAY ~What I'm about to suggest may sound unusual. But I ask that you escort me t
 IF ~~ THEN DO ~ClearAllActions() StartCutSceneMode() StartCutScene("BFSImn")~ EXIT
 END
 
-// IF ~~ BFSEM.investigationapproach
-// SAY ~In my current form I perceive only vague impressions. But I recall the sound of waves breaking against stone. Wood creaking under its own weight, carried across a vast body of water. Perhaps we seek a harbour of sorts?~
-// ++ ~We'll start searching around the docks then.~ + 
-// END
+IF ~~ BFSEM.investigationapproach
+SAY ~In my current form I perceive only vague impressions. But I recall the sound of waves breaking against stone. Wood creaking under its own weight, carried across a vast body of water. Perhaps we seek a harbour of sorts?~
+++ ~We'll start searching around the docks then.~ + BFSEM.docksmentioned
+END
+
+IF ~~ BFSEM.docksmentioned
+SAY ~I'll be here if you need me.~ 
+= ~Not that I can leave regardless. But it's the thought that counts, right?~
+IF ~~ DO ~SetGlobal("BFSEmelinaDocksSuggestion","GLOBAL",1) EraseJournalEntry(@100007) AddJournalEntry(@100008, QUEST)~ EXIT
+END

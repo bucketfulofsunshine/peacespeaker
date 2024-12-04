@@ -1,10 +1,6 @@
 BACKUP ~peacespeaker/backup~
 SUPPORT ~bucketfulofsunshine on Discord~
-VERSION ~1.0~
-
-ALWAYS
-  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
-END
+VERSION ~2.0~
 
 AUTO_TRA ~peacespeaker/translations/%s~ 
 
@@ -29,19 +25,37 @@ COPY ~peacespeaker/bam~ ~override~
 COPY ~peacespeaker/cre/BFSCWL.cre~ ~override~
 SAY NAME1 ~Twitchy Cowled One~
 SAY NAME2 ~Twitchy Cowled One~
+// Apprentice, Docks
+COPY ~peacespeaker/cre/BFSCWL2.cre~ ~override~
+SAY NAME1 ~Twitchy Cowled One~
+SAY NAME2 ~Twitchy Cowled One~
+WRITE_ASCII 0x2cc ~BFSCWL2~  #8
 // Mentor
 COPY ~peacespeaker/cre/BFSCOS.cre~ ~override~
 SAY NAME1 ~Cowled Wizard~
 SAY NAME2 ~Cowled Wizard~
+// Peacespeaker
+COPY ~peacespeaker/cre/BFSSB.cre~ ~override~
+SAY NAME1 ~Peacespeaker~
+SAY NAME2 ~Peacespeaker~
+WRITE_ASCII 0x2cc ~BFSS~  #8  // dialogue file 
+
+
+// Appending All The Things 
+APPEND ~pdialog.2da~ ~BFSS BFSSP BFSSJ BFSSD BFSS25P BFSS25J BFSS25d BFSS25~ UNLESS ~BFSS~
+
+APPEND ~interdia.2da~ ~BFSS BFSSB BFSSB25~ UNLESS ~BFSS~
 
 // Dialogues
 COMPILE EVALUATE_BUFFER ~peacespeaker/d/BFSCWL.d~
+        ~peacespeaker/d/BFSCWL2.d~
         ~peacespeaker/d/BFSCOS.d~
 		~peacespeaker/d/BFSSW.d~
 		
 // Scripts
 EXTEND_TOP ~AR0700.bcs~   ~peacespeaker/scripts/AR0700.baf~
-EXTEND_TOP ~AR1002.bcs~   ~peacespeaker/scripts/AR1002.baf~
+EXTEND_BOTTOM ~AR1002.bcs~   ~peacespeaker/scripts/AR1002.baf~
+EXTEND_BOTTOM ~AR0300.bcs~   ~peacespeaker/scripts/AR0300.baf~
 
 EXTEND_BOTTOM ~baldur.bcs~ ~peacespeaker/scripts/baldur.baf~ 
 USING ~peacespeaker/translations/english/WeaponStrings.tra~
@@ -65,7 +79,7 @@ Combat Ability:
 THAC0: +1
 Damage: 1d8+1 (slashing)
 Speed Factor: 4
-Proficiency Type: Long Sword
+Proficiency Type: Scimitar/Wakizashi/Ninjatō
 Type: One-handed
 Requires:
  6 Strength
@@ -75,7 +89,7 @@ Weight: 4~
 // Peacespeaker Base Form, Emelina isn't conversable, quest isn't being pursued
 COPY ~peacespeaker/itm/BFSS2.ITM~ ~override~
 SAY 0x0c ~Peacespeaker~
-SAY 0x54 ~A crudely-crafted longsword imbued with the ability to occasionally cast Cure Medium Wounds on a successful attack.
+SAY 0x54 ~A crudely-crafted scimitar imbued with the ability to occasionally cast Cure Medium Wounds on a successful attack.
 
 STATISTICS:
 
@@ -86,7 +100,7 @@ Combat Ability:
 THAC0: +1
 Damage: 1d8+1 (slashing)
 Speed Factor: 4
-Proficiency Type: Long Sword
+Proficiency Type: Scimitar/Wakizashi/Ninjatō
 Type: One-handed
 Requires:
  6 Strength
@@ -109,15 +123,24 @@ Combat Ability:
 THAC0: +3
 Damage: 1d8+3 (slashing)
 Speed Factor: 2
-Proficiency Type: Long Sword
+Proficiency Type: Scimitar/Wakizashi/Ninjatō
 Type: One-handed
 Requires:
  6 Strength
 
 Weight: 4~
+// Apprentice's Bloodstained Journal
+COPY ~peacespeaker/itm/BFSJNL.ITM~ ~override~
+SAY 0x0c ~Bloodstained Grimoire~
+SAY 0x54 ~This bloodstained spellbook stands as grim reminder that its wielder came to a gruesome end. Several of the pages within hold crudely scribed spells - many of them of beginner levels. Towards the end, however, the wielder starts to specialize in necromancy. Higher level spells of the particular school line the remaining pages. Along with increasingly erratic rants as the apprentice curses his mentor. Bemoaning his fate, since his mentor never has time to teach him and he's forced to experiment on his own. Often with less than desired results.
+
+Several of the passages within should be of interest to Inspector Brega and assist him with further investigations.~
 
 OUTER_SET label = RESOLVE_STR_REF(~Converse~)		
 		
 APPEND ~ITEMDIAL.2da~
 ~BFSSW %label% BFSSW~
 UNLESS ~BFSSW~
+
+// Sounds
+COPY ~peacespeaker/wav~ ~override~
