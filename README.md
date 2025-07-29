@@ -1,6 +1,8 @@
 # PEACESPEAKER, THE ANTI-VIOLENCE SWORD
 
-Embark on a short quest featuring a sentient sword (scimitar), an apprentice who's in WAAAYYY over her head, & a grumpy Cowled Wizard. 
+Embark on a short quest featuring a sentient scimitar, an apprentice who's in ***way*** over her head, & a grumpy Cowled Wizard. 
+
+This mod was created as a semi tongue-in-cheek contribution (anti-violence weapon) to the BG Modding Month contest. 
 
 ## FAQ
 
