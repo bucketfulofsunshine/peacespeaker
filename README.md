@@ -1,12 +1,12 @@
 # PEACESPEAKER, THE ANTI-VIOLENCE SWORD
 
-Embark on a short quest featuring a sentient sword (scimitar), an apprentice who's in WAAAYYY over her head, and a grumpy Cowled Wizard. 
+Embark on a short quest featuring a sentient sword (scimitar), an apprentice who's in WAAAYYY over her head, & a grumpy Cowled Wizard. 
 
 ## FAQ
 
 ### Q: Where can I start the quest?
 
-A: Explore Waukeen's Promenade after escaping Irenicus' Dungeon. If you leave the Promenade before speaking with the Twitchy Cowled One, then the quest can't be started. 
+A: Explore Waukeen's Promenade after escaping Irenicus' Dungeon. If you leave the Promenade before speaking with the Twitchy Cowled One, then the quest cannot be started. 
 
 ### Q: Will this be TRA-ified?
 
@@ -19,19 +19,15 @@ A: This is my first released quest mod. I've no doubt many inconsistencies and b
 
 ## CHANGELOG
 
-* 1.0 - Initial Release. Investigation branch not available.
-
-* 1.1 - Fixed Peacespeaker's usability. Added combat and non-combat barks. Added a unique dialogue if the player also has Lilarcor in their inventory.  
-
-* 2.0 - Small bug fixes, custom BAMs (thank you Zen <3) & a third option to report to Inspector Brega and bring the Cowled Wizard mentor to justice. 
+* 2.0 - Small bug fixes, custom BAMs (thank you Zen <3) & a third option to report to Inspector Brega & bring the Cowled Wizard mentor to justice. 
 
 ## LICENSING
 
-* My mod is open source. That means anyone is free to fork, make pull requests or alter content. While I'd prefer people approach me if they want new content (e.g. commentary to vanilla quests), crossmod is free real estate. You can contact me to co-write / co-code it. Or simply add the crossmod on your end without my involvement. 
+* My mod is open source. That means anyone is free to fork, make pull requests or alter content. While I'd prefer people approach me if they want new content (e.g. commentary to vanilla quests), crossmod is free real estate.
 
 ## SPECIAL THANKS
 
-* *Zenblack* - who is a wizard in his own right and kindly made custom BAMs for the mod. 
+* *Zenblack* - who is a wizard in his own right & kindly made custom BAMs for the mod. 
 
 * *Kantz* + *Niewiem* for keeping copies of my old mods & sending them my way - allowing me to reupload my older stuff. 
 
