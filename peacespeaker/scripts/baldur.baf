@@ -1,0 +1,67 @@
+IF
+    Delay(20)
+	!CombatCounter(0)
+	OR(6)
+		HasItemEquipedReal("BFSSW",Player1)
+		HasItemEquipedReal("BFSSW",Player2)
+		HasItemEquipedReal("BFSSW",Player3)
+		HasItemEquipedReal("BFSSW",Player4)
+		HasItemEquipedReal("BFSSW",Player5)
+		HasItemEquipedReal("BFSSW",Player6)
+THEN
+	RESPONSE #10
+		DisplayStringHeadOwner("BFSSW",@1000)
+	RESPONSE #10
+		DisplayStringHeadOwner("BFSSW",@1001)
+	RESPONSE #10
+		DisplayStringHeadOwner("BFSSW",@1002)
+	RESPONSE #10
+		DisplayStringHeadOwner("BFSSW",@1003)
+	RESPONSE #10
+		DisplayStringHeadOwner("BFSSW",@1004)
+	RESPONSE #10
+		DisplayStringHeadOwner("BFSSW",@1005)
+	RESPONSE #10
+		DisplayStringHeadOwner("BFSSW",@1006)
+	RESPONSE #10
+		DisplayStringHeadOwner("BFSSW",@1007)
+	RESPONSE #10
+		DisplayStringHeadOwner("BFSSW",@1008)
+	RESPONSE #10
+		DisplayStringHeadOwner("BFSSW",@1009)
+	RESPONSE #10
+		DisplayStringHeadOwner("BFSSW",@1010)		
+END
+
+IF
+	Delay(120)
+	CombatCounter(0)
+	OR(6)
+		HasItemEquipedReal("BFSSW",Player1)
+		HasItemEquipedReal("BFSSW",Player2)
+		HasItemEquipedReal("BFSSW",Player3)
+		HasItemEquipedReal("BFSSW",Player4)
+		HasItemEquipedReal("BFSSW",Player5)
+		HasItemEquipedReal("BFSSW",Player6)
+THEN
+	RESPONSE #10
+		DisplayStringHeadOwner("BFSSW",@1011)
+	RESPONSE #10
+		DisplayStringHeadOwner("BFSSW",@1012)
+	RESPONSE #10
+		DisplayStringHeadOwner("BFSSW",@1013)
+	RESPONSE #10
+		DisplayStringHeadOwner("BFSSW",@1014)
+	RESPONSE #10
+		DisplayStringHeadOwner("BFSSW",@1015)
+	RESPONSE #10
+		DisplayStringHeadOwner("BFSSW",@1016)
+	RESPONSE #10
+		DisplayStringHeadOwner("BFSSW",@1017)
+	RESPONSE #10
+		DisplayStringHeadOwner("BFSSW",@1018)
+	RESPONSE #10
+		DisplayStringHeadOwner("BFSSW",@1019)
+	RESPONSE #10
+		DisplayStringHeadOwner("BFSSW",@1020)
+END
