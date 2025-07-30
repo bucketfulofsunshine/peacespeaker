@@ -1,9 +1,9 @@
 
 // BFSCOS.d
-@500 = ~Do I look like someone who has time to spare?~ [bfsblank]
-@501 = ~We are tasked with maintaining the lawful practice of magic. Such vigilance is the only means to safeguard Amn and its people. Your... concerns are of the utmost annoya— ah, importance to us. What is it you wish to report?~ [bfsblank]
-@502 = ~You don't seem particularly fond of your duties.~ [bfsblank]
-@503 = ~An apprentice gave me a magical weapon and specifically bade me not to inform the Cowled Wizards.~ [bfsblank]
+@500 = ~Do I look like someone who has time to spare?~
+@501 = ~We are tasked with maintaining the lawful practice of magic. Such vigilance is the only means to safeguard Amn and its people. Your... concerns are of the utmost annoya— ah, importance to us. What is it you wish to report?~
+@502 = ~You don't seem particularly fond of your duties.~
+@503 = ~An apprentice gave me a magical weapon and specifically bade me not to inform the Cowled Wizards.~
 @504 = ~Would you be? Dealing with the laity is a tedious chore. But we all have our roles to play, especially if one hopes to rise further up the ranks. Not that it concerns someone outside our organization, of course.~
 @505 = ~Do you have something to report or not?~
 @506 = ~I have nothing to report.~

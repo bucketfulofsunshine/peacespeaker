@@ -6,16 +6,23 @@ AUTO_TRA ~peacespeaker/translations/%s~
 
 LANGUAGE ~English~
          ~english~
-         ~peacespeaker/translations/english/JournalEntries.tra~
-         ~peacespeaker/translations/english/Installation.tra~
          ~peacespeaker/translations/english/Creatures.tra~
          ~peacespeaker/translations/english/Dialog.tra~
+         ~peacespeaker/translations/english/Installation.tra~
+         ~peacespeaker/translations/english/Items.tra~
+         ~peacespeaker/translations/english/JournalEntries.tra~
 LANGUAGE ~Spanish~
          ~spanish~
+         ~peacespeaker/translations/spanish/Creatures.tra~
+         ~peacespeaker/translations/spanish/Dialog.tra~
+         ~peacespeaker/translations/spanish/Installation.tra~
+         ~peacespeaker/translations/spanish/Items.tra~
          ~peacespeaker/translations/spanish/JournalEntries.tra~
 
 BEGIN @0 DESIGNATED 0
 REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ @1
+
+COPY ~%MOD_FOLDER%/wav~ ~override~
 
 // CamDawg's code for State.ids
 APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
@@ -54,9 +61,9 @@ APPEND ~interdia.2da~ ~BFSS BFSSB BFSSB25~ UNLESS ~BFSS~
 
 // Dialogues
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/d/BFSCWL.d~
-        ~%MOD_FOLDER%/d/BFSCWL2.d~
-        ~%MOD_FOLDER%/d/BFSCOS.d~
-		~%MOD_FOLDER%/d/BFSSW.d~
+                        ~%MOD_FOLDER%/d/BFSCWL2.d~
+                        ~%MOD_FOLDER%/d/BFSCOS.d~
+                        ~%MOD_FOLDER%/d/BFSSW.d~
 
 // Scripts
 EXTEND_TOP    ~AR0700.bcs~   ~%MOD_FOLDER%/scripts/AR0700.baf~
@@ -95,4 +102,4 @@ APPEND ~ITEMDIAL.2da~
 UNLESS ~BFSSW~
 
 // Sounds
-COPY ~%MOD_FOLDER%/wav~ ~override~
+

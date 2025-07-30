@@ -7,7 +7,7 @@ there is a third option, inspector brega, but that shouldn't be clear from the s
 BEGIN BFSCWL
 
 IF ~Global("BFSApprenticeMet","GLOBAL",0)~ THEN BFSCWL.intro
-SAY @640 /*~That was quite the entrance you made.~*/ []
+SAY @640 /*~That was quite the entrance you made.~*/
 + ~!Class(Player1,THIEF_ALL)~ + @641 /*~Subtlety has never been among my strengths.~*/ + BFSCWL.notsubtle
 ++ @642 /*~I usually pass unnoticed.~*/ + BFSCWL.sneakthief
 + ~Class(Player1,BARD)~ + @643 /*~Anything less and I'd be a disgrace to my craft.~*/ + BFSCWL.okaynarcissus

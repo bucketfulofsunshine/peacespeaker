@@ -79,14 +79,14 @@ END
 
 IF ~~ BFSEM.ImnesvaleAccepted
 SAY @578 /*~I cannot begin to express the depths of my gratitude.~*/
-@579 /*There is another matter. As a druid of Eldath, I have taken vows to avoid violence. Yet a sheathed blade may not serve you. I ask that, if you must draw me, to do so only in moments of great need.*/
+= @579 /*There is another matter. As a druid of Eldath, I have taken vows to avoid violence. Yet a sheathed blade may not serve you. I ask that, if you must draw me, to do so only in moments of great need.*/
 = @580 /*~With my soul bound to the blade, a portion of my healing powers remain. May they add you in our shared cause.~*/
 IF ~~ DO ~SetGlobal("BFSEmelinaIntro","GLOBAL",1) EraseJournalEntry(@100001) AddJournalEntry(@100002, QUEST)~ EXIT
 END
 
 IF ~~ BFSEM.CowledRatty
 SAY @581 /*~I only ask that you consider my solution.~*/
-@579 /*There is another matter. As a druid of Eldath, I have taken vows to avoid violence. Yet a sheathed blade may not serve you. I ask that, if you must draw me, to do so only in moments of great need.*/
+= @579 /*There is another matter. As a druid of Eldath, I have taken vows to avoid violence. Yet a sheathed blade may not serve you. I ask that, if you must draw me, to do so only in moments of great need.*/
 = @580 /*~With my soul bound to the blade, a portion of my healing powers remain. May they add you in our shared cause.~*/
 IF ~~ DO ~SetGlobal("BFSEmelinaIntro","GLOBAL",1) EraseJournalEntry(@100001) AddJournalEntry(@100002, QUEST)~ EXIT
 END
@@ -123,7 +123,7 @@ Emelina thinks this is a special kind of hell. */
 IF ~Global("BFSEmelinaLilarcor","GLOBAL",0) PartyHasItem("SW2H14")~ THEN BEGIN BFSEM.LilarcorTalk
 SAY @585 /*~I have never felt this opposed to another being in my entire existence.~*/
 = @586 /*~Lilarcor's bloodlust leaves me ill-at-ease. Though, at least, one of us seems to enjoy our current predicament. After all - what is a sword good for if not to shed blood?~*/
-++ @587 /*~You can say *violently* opposed, you know?~*/ + BFSEM.LilViolentlyOpposed*/
+++ @587 /*~You can say *violently* opposed, you know?~*/ + BFSEM.LilViolentlyOpposed
 ++ @588 /*~You two seem to be polar opposites.~*/ + BFSEM.LilOpposites
 ++ @589 /*~Lilarcor is an acquired taste, I admit.~*/ + BFSEM.LilIsAPersonality
 ++ @590 /*~You are more than a simple sword, Emelina.~*/ + BFSEM.LilComfort
@@ -234,7 +234,7 @@ END
 
 IF ~~ BFSEM.pastlife
 SAY @625 /*~Quiet and serene. My days began in peaceful meditation, and when the sun rose high, we would tend to the needs of the land. By nightfall we would gather around a campfire, sharing stories, laughter and drinks among friends.~*/
-@626 /*~My life was one full of contentment. I look back on with warmth.~*/
+= @626 /*~My life was one full of contentment. I look back on with warmth.~*/
 IF ~~ DO ~SetGlobal("BFSPastLife","GLOBAL",1)~ EXIT
 END
 

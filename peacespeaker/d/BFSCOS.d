@@ -5,20 +5,20 @@ BEGIN BFSCOS
 
 // The quest hasn't been started
 IF ~!Global("BFSEmelinaTaskAccepted","GLOBAL",1)~ THEN BFSCOS.notime
-SAY @500 [bfsblank] /*Do I look like someone who has time to spare?*/
+SAY @500  /*Do I look like someone who has time to spare?*/
 IF ~~ EXIT
 END
 
 IF ~Global("BFSEmelinaTaskAccepted","GLOBAL",1) !PartyHasItem("BFSSW")~ THEN BFSCOS.notime
-SAY @500 [bfsblank] /*Do I look like someone who has time to spare?*/
+SAY @500 /*Do I look like someone who has time to spare?*/
 IF ~~ EXIT
 END
 
 // The quest is started, PC wants to inform the Cowled Wizards of Emelina's existence
 IF ~Global("BFSEmelinaTaskAccepted","GLOBAL",1) PartyHasItem("BFSSW")~ THEN BFSCOS.theniliedlikealiar
-SAY @501 [bfsblank] /*We are tasked with maintaining the lawful practice of magic. Such vigilance is the only means to safeguard Amn and its people. Your... concerns are of the utmost annoya— ah, importance to us. What is it you wish to report?*/
-++ @502 [bfsblank] /*You don't seem particularly fond of your duties.*/ + BFSCOS.deathandtaxes
-++ @503 [bfsblank] /*An apprentice gave me a magical weapon and specifically bade me not to inform the Cowled Wizards.*/ + BFSCOS.rattedout
+SAY @501 /*We are tasked with maintaining the lawful practice of magic. Such vigilance is the only means to safeguard Amn and its people. Your... concerns are of the utmost annoya— ah, importance to us. What is it you wish to report?*/
+++ @502 /*You don't seem particularly fond of your duties.*/ + BFSCOS.deathandtaxes
+++ @503 /*An apprentice gave me a magical weapon and specifically bade me not to inform the Cowled Wizards.*/ + BFSCOS.rattedout
 ++ @506 /*I have nothing to report*/ + BFSCOS.secondthoughts
 END
 
@@ -83,7 +83,7 @@ END
 ++ @522 /*From my hands safely to yours.*/ EXTERN HABREGA BFS.BregaEvidenceEnd
 
 CHAIN HABREGA BFS.BregaEvidenceEnd
-@532 /*~Thank you, citizen. Corruption within the Cowled Wizard ranks is rampant but, with this, we'll take a small step towards ending it.~*/
+@523 /*~Thank you, citizen. Corruption within the Cowled Wizard ranks is rampant but, with this, we'll take a small step towards ending it.~*/
 = @524 /*Once the trial is over, I will personally see to freeing the soul from the sword. For now, as a token of the city's esteem and my personal thanks, I'd like to offer you a reward.*/
 DO ~AddJournalEntry(@100010, QUEST_DONE) TakePartyItem("BFSSW") DestroyItem("BFSSW") TakePartyItem("BFSJNL") DestroyItem("BFSJNL") GiveGoldForce(10000) AddXPObject(Player1,10000) AddXPObject(Player2,10000) AddXPObject(Player3,10000) AddXPObject(Player4,10000) AddXPObject(Player5,10000) AddXPObject(Player6,10000)~
 EXIT
