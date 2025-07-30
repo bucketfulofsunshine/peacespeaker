@@ -2,145 +2,104 @@ BACKUP ~peacespeaker/backup~
 SUPPORT ~bucketfulofsunshine on Discord~
 VERSION ~2.0~
 
-AUTO_TRA ~peacespeaker/translations/%s~ 
-
+AUTO_TRA ~peacespeaker/translations/%s~
 
 LANGUAGE ~English~
-         ~english~   
+         ~english~
+         ~peacespeaker/translations/english/Creatures.tra~
+         ~peacespeaker/translations/english/Dialog.tra~
+         ~peacespeaker/translations/english/Installation.tra~
+         ~peacespeaker/translations/english/Items.tra~
          ~peacespeaker/translations/english/JournalEntries.tra~
+LANGUAGE ~Spanish~
+         ~spanish~
+         ~peacespeaker/translations/spanish/Creatures.tra~
+         ~peacespeaker/translations/spanish/Dialog.tra~
+         ~peacespeaker/translations/spanish/Installation.tra~
+         ~peacespeaker/translations/spanish/Items.tra~
+         ~peacespeaker/translations/spanish/JournalEntries.tra~
 
-BEGIN ~Peacespeaker, The Anti-Violence Sword~
+BEGIN @0 DESIGNATED 0
+REQUIRE_PREDICATE GAME_IS ~bg2 bgt bg2ee eet~ @1
+
+COPY ~%MOD_FOLDER%/wav~ ~override~
 
 // CamDawg's code for State.ids
 APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
 UNLESS ~CD_STATE_NOTVALID~
 
-ADD_JOURNAL TITLE (@100000) @100001 @100002 USING ~peacespeaker/translations/english/JournalEntries.tra~ 
+ADD_JOURNAL TITLE (@100000) @100001 @100002 USING ~%MOD_FOLDER%/translations/%LANGUAGE%/JournalEntries.tra~
 
 // Bams
-COPY ~peacespeaker/bam~ ~override~
+COPY ~%MOD_FOLDER%/bam~ ~override~
 
 //Creatures//
 // Apprentice
-COPY ~peacespeaker/cre/BFSCWL.cre~ ~override~
-SAY NAME1 ~Twitchy Cowled One~
-SAY NAME2 ~Twitchy Cowled One~
+COPY ~%MOD_FOLDER%/cre/BFSCWL.cre~ ~override~
+SAY NAME1 @50
+SAY NAME2 @50
 // Apprentice, Docks
-COPY ~peacespeaker/cre/BFSCWL2.cre~ ~override~
-SAY NAME1 ~Twitchy Cowled One~
-SAY NAME2 ~Twitchy Cowled One~
+COPY ~%MOD_FOLDER%/cre/BFSCWL2.cre~ ~override~
+SAY NAME1 @50
+SAY NAME2 @50
 WRITE_ASCII 0x2cc ~BFSCWL2~  #8
 // Mentor
-COPY ~peacespeaker/cre/BFSCOS.cre~ ~override~
-SAY NAME1 ~Cowled Wizard~
-SAY NAME2 ~Cowled Wizard~
+COPY ~%MOD_FOLDER%/cre/BFSCOS.cre~ ~override~
+SAY NAME1 @51
+SAY NAME2 @51
 // Peacespeaker
-COPY ~peacespeaker/cre/BFSSB.cre~ ~override~
-SAY NAME1 ~Peacespeaker~
-SAY NAME2 ~Peacespeaker~
-WRITE_ASCII 0x2cc ~BFSS~  #8  // dialogue file 
+COPY ~%MOD_FOLDER%/cre/BFSSB.cre~ ~override~
+SAY NAME1 @52
+SAY NAME2 @52
+WRITE_ASCII 0x2cc ~BFSS~ #8  // dialogue file
 
 
-// Appending All The Things 
+// Appending All The Things
 APPEND ~pdialog.2da~ ~BFSS BFSSP BFSSJ BFSSD BFSS25P BFSS25J BFSS25d BFSS25~ UNLESS ~BFSS~
 
 APPEND ~interdia.2da~ ~BFSS BFSSB BFSSB25~ UNLESS ~BFSS~
 
 // Dialogues
-COMPILE EVALUATE_BUFFER ~peacespeaker/d/BFSCWL.d~
-        ~peacespeaker/d/BFSCWL2.d~
-        ~peacespeaker/d/BFSCOS.d~
-		~peacespeaker/d/BFSSW.d~
-		
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/d/BFSCWL.d~
+                        ~%MOD_FOLDER%/d/BFSCWL2.d~
+                        ~%MOD_FOLDER%/d/BFSCOS.d~
+                        ~%MOD_FOLDER%/d/BFSSW.d~
+
 // Scripts
-EXTEND_TOP ~AR0700.bcs~   ~peacespeaker/scripts/AR0700.baf~
-EXTEND_BOTTOM ~AR1002.bcs~   ~peacespeaker/scripts/AR1002.baf~
-EXTEND_BOTTOM ~AR0300.bcs~   ~peacespeaker/scripts/AR0300.baf~
+EXTEND_TOP    ~AR0700.bcs~   ~%MOD_FOLDER%/scripts/AR0700.baf~
+EXTEND_BOTTOM ~AR1002.bcs~   ~%MOD_FOLDER%/scripts/AR1002.baf~
+EXTEND_BOTTOM ~AR0300.bcs~   ~%MOD_FOLDER%/scripts/AR0300.baf~
 
-EXTEND_BOTTOM ~baldur.bcs~ ~peacespeaker/scripts/baldur.baf~ 
-USING ~peacespeaker/translations/english/WeaponStrings.tra~
+EXTEND_BOTTOM ~baldur.bcs~ ~%MOD_FOLDER%/scripts/baldur.baf~
+USING ~%MOD_FOLDER%/translations/%LANGUAGE%/WeaponStrings.tra~
 
-COMPILE	EVALUATE_BUFFER ~peacespeaker/scripts/BFSIMN.baf~
+COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/scripts/BFSIMN.baf~
 
 // Custom Items
 // Peacespeaker Base Form
-COPY ~peacespeaker/itm/BFSSW.ITM~ ~override~
-SAY 0x0c ~Peacespeaker~
-SAY 0x54 ~This crudely-crafted blade bears the mark of two unskilled apprentices. While the exterior is basic in form, and offers no hint to its power, trapped within lies the soul of a druid of Eldath. Occasionally, on a successful attack, the wielder may syphon part of her remaining powers - recovering a portion of their health.
-
-Though lacking in raw offensive power, Peacespeaker offers powerful protective and healing magic.
-
-STATISTICS:
-
-Combat Ability: 
-– 40% chance per hit of casting Cure Medium Wounds on the wielder
-– +20% resistance to slashing, piercing, and crushing damage
-
-THAC0: +1
-Damage: 1d8+1 (slashing)
-Speed Factor: 4
-Proficiency Type: Scimitar/Wakizashi/Ninjatō
-Type: One-handed
-Requires:
- 6 Strength
-
-Weight: 4~
+COPY ~%MOD_FOLDER%/itm/BFSSW.ITM~ ~override~
+SAY 0x0c @100
+SAY 0x54 @101
 
 // Peacespeaker Base Form, Emelina isn't conversable, quest isn't being pursued
-COPY ~peacespeaker/itm/BFSS2.ITM~ ~override~
-SAY 0x0c ~Peacespeaker~
-SAY 0x54 ~A crudely-crafted scimitar imbued with the ability to occasionally cast Cure Medium Wounds on a successful attack.
-
-STATISTICS:
-
-Combat Ability: 
-– 40% chance per hit of casting Cure Medium Wounds on the wielder
-– +20% resistance to slashing, piercing, and crushing damage
-
-THAC0: +1
-Damage: 1d8+1 (slashing)
-Speed Factor: 4
-Proficiency Type: Scimitar/Wakizashi/Ninjatō
-Type: One-handed
-Requires:
- 6 Strength
-
-Weight: 4~
+COPY ~%MOD_FOLDER%/itm/BFSS2.ITM~ ~override~
+SAY 0x0c @100
+SAY 0x54 @102
 
 // Peacespeaker Upgraded Form, Emelina's quest is completed
-COPY ~peacespeaker/itm/BFSSU.ITM~ ~override~
-SAY 0x0c ~Peacespeaker~
-SAY 0x54 ~In gratitude for returning Emelina's soul to the fold, Eldath has enchanted the blade known as Peacespeaker even further. The healing magic contained within is stronger and responds more frequently. 
-
-Though still lacking in raw offensive power, Peacespeaker offers powerful protective and healing magic.
-
-STATISTICS:
-
-Combat Ability: 
-– 50% chance per hit of casting Cure Critical Wounds on the wielder
-– +20% resistance to slashing, piercing, and crushing damage
-
-THAC0: +3
-Damage: 1d8+3 (slashing)
-Speed Factor: 2
-Proficiency Type: Scimitar/Wakizashi/Ninjatō
-Type: One-handed
-Requires:
- 6 Strength
-
-Weight: 4~
+COPY ~%MOD_FOLDER%/itm/BFSSU.ITM~ ~override~
+SAY 0x0c @100
+SAY 0x54 @103
 // Apprentice's Bloodstained Journal
-COPY ~peacespeaker/itm/BFSJNL.ITM~ ~override~
-SAY 0x0c ~Bloodstained Grimoire~
-SAY 0x54 ~This bloodstained spellbook stands as grim reminder that its wielder came to a gruesome end. Several of the pages within hold crudely scribed spells - many of them of beginner levels. Towards the end, however, the wielder starts to specialize in necromancy. Higher level spells of the particular school line the remaining pages. Along with increasingly erratic rants as the apprentice curses his mentor. Bemoaning his fate, since his mentor never has time to teach him and he's forced to experiment on his own. Often with less than desired results.
+COPY ~%MOD_FOLDER%/itm/BFSJNL.ITM~ ~override~
+SAY 0x0c @104
+SAY 0x54 @105
 
-Several of the passages within should be of interest to Inspector Brega and assist him with further investigations.~
+OUTER_SET label = RESOLVE_STR_REF(@106)
 
-OUTER_SET label = RESOLVE_STR_REF(~Converse~)		
-		
 APPEND ~ITEMDIAL.2da~
 ~BFSSW %label% BFSSW~
 UNLESS ~BFSSW~
 
 // Sounds
-COPY ~peacespeaker/wav~ ~override~
+
