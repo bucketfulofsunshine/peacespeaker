@@ -130,8 +130,6 @@ And let me flow back to your peaceful embrace.~
 @650 = ~Speak then and be done with it.~
 @651 = ~On second thought, I'm not interested.~
 @652 = ~There is a certain subtlety to your movements. That's precisely the talent that I need. Will you hear me out?~
-@653 = ~Speak then and be done with it.~
-@654 = ~On second thought, I'm not interested.~
 @655 = ~You're a performer? I hoped our dealings would remain out of the ears of the public...~
 @656 = ~Then you may understand the urgency of my plight. Will you hear me out?~
 @657 = ~...Oh. Well, uh, then we never had this conversation.~
@@ -162,7 +160,7 @@ And let me flow back to your peaceful embrace.~
 @682 = ~But I lack the power to undo the binding myself, and I cannot leave the city without raising suspicion.~
 @683 = ~What exactly are you asking of me?~
 @684 = ~My request is twofold. Take the sword from me and heed the soul's counsel. Help her as best you can.~
-~And secondly... breathe not a word of this to anyone. Especially not the Cowled Wizards. If they find out what I've done, I will be punished. Or worse my family will suffer. I cannot risk either.~
+@6840 = ~And secondly... breathe not a word of this to anyone. Especially not the Cowled Wizards. If they find out what I've done, I will be punished. Or worse my family will suffer. I cannot risk either.~
 @685 = ~Why would you entrust a stranger with this task?~
 @686 = ~You are guilty. Justice demands that you atone for the soul you've ruined.~
 @687 = ~I will see the task done. And I won't say a word.~

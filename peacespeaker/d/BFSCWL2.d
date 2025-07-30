@@ -17,13 +17,13 @@ END
 IF ~~ BFSDOC.StillATerribleMage
 SAY @708 /*~You're beginning to sound just like my mentor. For the record I *am* trying.~*/
 = @709 /*~And you're avoiding the question. Why are you here?~*/
-++ @710 /*~I'm here to gather evidence against your mentor.~*/ + BFSDOC.Evidence
+++ @705 /*~I'm here to gather evidence against your mentor.~*/ + BFSDOC.Evidence
 END
 
 IF ~~ BFSDOC.CannotSneakForShit
 SAY @711 /*~You found me by accident? I'm terrible at this stealth aspect then.~*/
 = @712 /*~But not quite so hopeless as to miss an obvious clue. You want something. What is it?~*/
-++ @713 /*~I'm here to gather evidence against your mentor.~*/ + BFSDOC.Evidence
+++ @705 /*~I'm here to gather evidence against your mentor.~*/ + BFSDOC.Evidence
 END
 
 IF ~~ BFSDOC.Evidence
@@ -35,7 +35,7 @@ END
 
 IF ~~ BFSDOC.InsultingApprenticesForFunAndProfit
 SAY @718 /*~You… You are the absolute worst. Just tell me what you need and leave me alone!~*/
-++ @719 /*~Inspector Brega has offered his assistance - but he needs solid proof of your mentor's involvement.~*/ + BFSDOC.BregaIsABro
+++ @716 /*~Inspector Brega has offered his assistance - but he needs solid proof of your mentor's involvement.~*/ + BFSDOC.BregaIsABro
 END
 
 IF ~~ BFSDOC.BregaIsABro

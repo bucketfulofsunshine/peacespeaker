@@ -28,8 +28,8 @@ IF ~~ BFSCWL.sneakthief
 SAY @652 /*~There is a certain subtlety to your movements. That's precisely the talent that I need. Will you hear me out?~*/
 + ~OR(2) CheckStatGT(Player1,14,WIS) CheckStatGT(Player1,14,INT)~ + @648 /*~You seem uneasy.~*/ + BFSCWL.twitchymuch
 ++ @649 /*~I will listen.~*/ + BFSCWL.quest
-++ @653 /*~Speak then and be done with it.~*/ + BFSCWL.quest
-++ @654 /*~On second thought, I'm not interested.~*/ + BFSCWL.notinterested
+++ @650 /*~Speak then and be done with it.~*/ + BFSCWL.quest
+++ @651 /*~On second thought, I'm not interested.~*/ + BFSCWL.notinterested
 END
 
 IF ~~ BFSCWL.okaynarcissus
@@ -117,8 +117,8 @@ SAY @681 /*~My fellow apprentice died during the process. The decision on how to
 END
 
 IF ~~ BFSCWL.gettothepoint
-SAY @684 /*~My request is twofold. Take the sword from me and heed the soul's counsel. Help her as best you can.~
-~And secondly... breathe not a word of this to anyone. Especially not the Cowled Wizards. If they find out what I've done, I will be punished. Or worse my family will suffer. I cannot risk either.~*/
+SAY @684 /*~My request is twofold. Take the sword from me and heed the soul's counsel. Help her as best you can.~*/
+= @6840 /*And secondly... breathe not a word of this to anyone. Especially not the Cowled Wizards. If they find out what I've done, I will be punished. Or worse my family will suffer. I cannot risk either.~*/
 ++ @685 /*~Why would you entrust a stranger with this task?~*/ + BFSCWL.butmanamibadatmath
 ++ @686 /*~You are guilty. Justice demands that you atone for the soul you've ruined.~*/ + BFSCWL.guilt
 ++ @687 /*~I will see the task done. And I won't say a word.~*/ + BFSCWL.loot
