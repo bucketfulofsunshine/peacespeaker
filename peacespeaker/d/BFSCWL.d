@@ -36,16 +36,16 @@ IF ~~ BFSCWL.okaynarcissus
 SAY @655 /*~You're a performer? I hoped our dealings would remain out of the ears of the public...~*/
 + ~OR(2) CheckStatGT(Player1,14,WIS) CheckStatGT(Player1,14,INT)~ + @648 /*~You seem uneasy.~*/ + BFSCWL.twitchymuch
 ++ @649 /*~I will listen.~*/ + BFSCWL.quest
-++ @653 /*~Speak then and be done with it.~*/ + BFSCWL.quest
-++ @654 /*~On second thought, I'm not interested.~*/ + BFSCWL.notinterested
+++ @650 /*~Speak then and be done with it.~*/ + BFSCWL.quest
+++ @651 /*~On second thought, I'm not interested.~*/ + BFSCWL.notinterested
 END
 
 IF ~~ BFSCWL.desperationsucks
 SAY @656 /*~Then you may understand the urgency of my plight. Will you hear me out?~*/
 + ~OR(2) CheckStatGT(Player1,14,WIS) CheckStatGT(Player1,14,INT)~ + @648 /*~You seem uneasy.~*/ + BFSCWL.twitchymuch
 ++ @649 /*~I will listen.~*/ + BFSCWL.quest
-++ @653 /*~Speak then and be done with it.~*/ + BFSCWL.quest
-++ @654 /*~On second thought, I'm not interested.~*/ + BFSCWL.notinterested
+++ @650 /*~Speak then and be done with it.~*/ + BFSCWL.quest
+++ @651 /*~On second thought, I'm not interested.~*/ + BFSCWL.notinterested
 END
 
 /* peacespeaker.exe has been uninstalled
@@ -58,8 +58,8 @@ END
 IF ~~ BFSCWL.twitchymuch
 SAY @658 /*~Nervous? Me? No, no, it's nothing. Truly.~*/
 ++ @649 /*~I will listen.~*/ + BFSCWL.quest
-++ @653 /*~Speak then and be done with it.~*/ + BFSCWL.quest
-++ @654 /*~On second thought, I'm not interested.~*/ + BFSCWL.notinterested
+++ @650 /*~Speak then and be done with it.~*/ + BFSCWL.quest
+++ @651 /*~On second thought, I'm not interested.~*/ + BFSCWL.notinterested
 END
 
 /* she done goofed and offers up a quest */
