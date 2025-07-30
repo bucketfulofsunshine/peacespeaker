@@ -1,6 +1,6 @@
 BACKUP ~peacespeaker/backup~
 SUPPORT ~bucketfulofsunshine on Discord~
-VERSION ~2.0~
+VERSION ~2.1~
 
 AUTO_TRA ~peacespeaker/translations/%s~
 
