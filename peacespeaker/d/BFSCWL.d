@@ -52,7 +52,7 @@ END
 she YEETS herself out of there */
 IF ~~ BFSCWL.notinterested
 SAY @657 /*~...Oh. Well, uh, then we never had this conversation.~*/
-IF ~~ DO ~SetGlobal("BFSApprenticeMet","GLOBAL",1) ActionOverride("BFSCWL",EscapeArea())~ EXIT
+IF ~~ DO ~SetGlobal("BFSApprenticeMet","GLOBAL",1) EscapeArea()~ EXIT
 END
 
 IF ~~ BFSCWL.twitchymuch

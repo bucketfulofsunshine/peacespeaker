@@ -63,7 +63,7 @@ IF ~~ + BFSEM.RevertSpell
 END
 
 IF ~~ BFSEM.Forgiveness
-SAY @572 /*~What other course should I take? She did not intend this - and vindictiveness brings me no closer to freedom.~*/
+SAY @572 /*~What other course should I take? She did not intend this and vindictiveness brings me no closer to freedom.~*/
 IF ~~ + BFSEM.RevertSpell
 END
 
@@ -72,8 +72,6 @@ SAY @573 /*~I have given some thought to the matter. Any harm that befalls me is
 = @574 /*~There is a small town, known as Imnesvale, held sacred by rangers and druids alike. Eldath's presence is strong there. If you would guide me there, I may call upon my goddess, and she will hear my prayers.~*/
 ++ @575 /*~I will do as you suggest.~*/ + BFSEM.ImnesvaleAccepted
 ++ @576 /*~I have no intention of taking you anywhere. The Cowled Wizards must learn of this deception.~*/ + BFSEM.CowledRatty
-/* The option that lets you speak with Brega and investigate aka version 2.0 of Peacespeaker. */
-// ++ ~While I sympathise with your plight, this injustice cannot go unanswered. If the Cowled Wizards are not held to account for their actions, others may suffer the same fate. We have to report this to Amn's authorities.~ + BFSEM.LawfulPath
 ++ @577 /*~I require a weapon but I have no interest in conversing with you further.~*/ + BFSEM.EldathTrial
 END
 
@@ -90,12 +88,6 @@ SAY @581 /*~I only ask that you consider my solution.~*/
 = @580 /*~With my soul bound to the blade, a portion of my healing powers remain. May they add you in our shared cause.~*/
 IF ~~ DO ~SetGlobal("BFSEmelinaIntro","GLOBAL",1) EraseJournalEntry(@100001) AddJournalEntry(@100002, QUEST)~ EXIT
 END
-
-/*IF ~~ BFSEM.LawfulPath
-SAY ~I would not wish this fate upon another. If you believe this to be the best course...~
-= ~Then I will aid you as best I can.~
-IF ~~ DO ~SetGlobal("BFSEmelinaIntro","GLOBAL",1) EraseJournalEntry(@100001) AddJournalEntry(@100002, QUEST)~ EXIT
-END */
 
 /* She goes quiet for good after this. Hoping she might find a peaceful solution WAY down the line. With someone else.
 Change to normal longsword, no longer conversable. */
@@ -122,7 +114,7 @@ END
 Emelina thinks this is a special kind of hell. */
 IF ~Global("BFSEmelinaLilarcor","GLOBAL",0) PartyHasItem("SW2H14")~ THEN BEGIN BFSEM.LilarcorTalk
 SAY @585 /*~I have never felt this opposed to another being in my entire existence.~*/
-= @586 /*~Lilarcor's bloodlust leaves me ill-at-ease. Though, at least, one of us seems to enjoy our current predicament. After all - what is a sword good for if not to shed blood?~*/
+= @586 /*~Lilarcor's bloodlust leaves me ill-at-ease. Though, at least, one of us seems to enjoy our current predicament. After all, what is a sword good for if not to shed blood?~*/
 ++ @587 /*~You can say *violently* opposed, you know?~*/ + BFSEM.LilViolentlyOpposed
 ++ @588 /*~You two seem to be polar opposites.~*/ + BFSEM.LilOpposites
 ++ @589 /*~Lilarcor is an acquired taste, I admit.~*/ + BFSEM.LilIsAPersonality
@@ -179,8 +171,7 @@ SAY @605 /*~Gentle Eldath, hear my plea
 My soul, bound and tethered, longs for release.
 Unbind me from this shell,
 And let me flow back to your peaceful embrace.~*/
-// Add Magic healing effect here
-IF ~~ DO ~CreateVisualEffectObject("SPHEALIN",Player1) TransformItem("BFSSW","BFSSU") AddXPObject(Player1,5000) AddXPObject(Player2,5000) AddXPObject(Player3,5000) AddXPObject(Player4,5000) AddXPObject(Player5,5000) AddXPObject(Player6,5000) SetGlobal("BFSEmelinaUmarHills","GLOBAL",2) EraseJournalEntry(@100005) AddJournalEntry(@100006, QUEST_DONE)~ EXIT
+IF ~~ DO ~CreateVisualEffectObject("SPHEALIN",Player1) TransformItem("BFSSW","BFSSU") AddExperienceParty(30000) SetGlobal("BFSEmelinaUmarHills","GLOBAL",2) EraseJournalEntry(@100005) AddJournalEntry(@100006, QUEST_DONE)~ EXIT
 END
 
 /////////////////////////////////////////

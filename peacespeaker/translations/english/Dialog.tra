@@ -15,11 +15,11 @@
 @512 = ~Very well. But I expect a reward for my cooperation.~
 @513 = ~Velanna thought she could deceive me? Inconceivable.~
 @514 = ~I shall resolve your complaint personally. Your part is over. Accept this offering of coin as a sign of my esteem. The Cowled Wizards thank you for your service.~
-@515 = ~Since I've helped you, I want to ask where I can find someone taken by--~
+@515 = ~Since I've helped you, I want to ask where I can find someone taken by—~
 @516 = ~You are really worked up about this.~
 @517 = ~I must be off. Excuse me.~
 @518 = ~Magical misconduct, you say? *sigh* Such matters fall beyond my jurisdiction. Regrettably.~
-@519 = ~You are not the first to report Cowled Wizard negligence. I cannot take these claims further - without proof my hands are tied. If you possess - or find - some form of evidence, I may be able to force the matter.~
+@519 = ~You are not the first to report Cowled Wizard negligence. I cannot take these claims further. Without proof my hands are tied. If you possess, or find, some form of evidence, I may be able to force the matter.~
 @520 = ~Otherwise, if you seek quick justice - some warped version of it - speak with the Cowled Wizards themselves. There are several present within this hall.~
 @521 = ~She has. A rather sordid affair, I must say. Miss Velanna mentioned that you'd hand over a journal along with the magical sword in question.~
 @522 = ~From my hands safely to yours.~
@@ -52,7 +52,7 @@
 @569 = ~Then how do we undo the spell?~
 @570 = ~To remain in this state, bound to steel and without life's natural cycle, goes against everything I believed as a druid. No. I would not cling to this form out of fear. There is no terror in passing beyond. Only peace.~
 @571 = ~There is power in your words. There is strength. I thank you for it. Your resolve bolsters my own spirit.~
-@572 = ~What other course should I take? She did not intend this - and vindictiveness brings me no closer to freedom.~
+@572 = ~What other course should I take? She did not intend this and vindictiveness brings me no closer to freedom.~
 @573 = ~I have given some thought to the matter. Any harm that befalls me is within my goddess' power to revert. Yet my connection to her is faint... weakened. I cannot commune with Eldath. Not within the confines of this city - steeped in violence and unrest. And, within this form, my reach is further limited.~
 @574 = ~There is a small town, known as Imnesvale, held sacred by rangers and druids alike. Eldath's presence is strong there. If you would guide me there, I may call upon my goddess, and she will hear my prayers.~
 @575 = ~I will do as you suggest.~
@@ -66,7 +66,7 @@
 @583 = ~I accept your trial, Eldath, and I will endure as long as I must.~
 @584 = ~As you command.~
 @585 = ~I have never felt this opposed to another being in my entire existence.~
-@586 = ~Lilarcor's bloodlust leaves me ill-at-ease. Though, at least, one of us seems to enjoy our current predicament. After all - what is a sword good for if not to shed blood?~
+@586 = ~Lilarcor's bloodlust leaves me ill-at-ease. Though, at least, one of us seems to enjoy our current predicament. After all, what is a sword good for if not to shed blood?~
 @587 = ~You can say *violently* opposed, you know?~
 @588 = ~You two seem to be polar opposites.~
 @589 = ~Lilarcor is an acquired taste, I admit.~
@@ -185,7 +185,7 @@ And let me flow back to your peaceful embrace.~
 @712 = ~But not quite so hopeless as to miss an obvious clue. You want something. What is it?~
 @713 = ~I'm here to gather evidence against your mentor.~
 @714 = ~Someone's actually willing to stand against the Cowled Wizards? That's… hard to fathom. If bringing them to task was easy, I'd have done it myself.~
-@715 = ~I'd also have been killed for the attempt. But that's part of the not-easy aspect.~
+@715 = ~I'd also have been killed for the attempt. But that's part of the not-easy part.~
 @716 = ~Inspector Brega has offered his assistance - but he needs solid proof of your mentor's involvement.~
 @717 = ~You'd be aiming a little above your skillset.~
 @718 = ~You… You are the absolute worst. Just tell me what you need and leave me alone!~

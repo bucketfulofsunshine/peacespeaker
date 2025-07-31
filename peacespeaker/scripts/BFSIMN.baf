@@ -13,11 +13,7 @@ JumpToPoint([2488.3438])
 SmallWait(5)
 FadeFromColor([20.0],0)
 Wait(2)
-// ActionOverride("BFSSW",StartDialogueNoSet(Player1))
-// StartDialogueNoSet(Player1)
 EraseJournalEntry(@100002)
 AddJournalEntry(@100005, QUEST)
 EndCutsceneMode()
 END
-
-

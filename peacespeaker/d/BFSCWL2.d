@@ -28,7 +28,7 @@ END
 
 IF ~~ BFSDOC.Evidence
 SAY @714 /*~Someone's actually willing to stand against the Cowled Wizards? That's… hard to fathom. If bringing them to task was easy, I'd have done it myself.~*/
-= @715 /*~I'd also have been killed for the attempt. But that's part of the not-easy aspect.~*/
+= @715 /*~I'd also have been killed for the attempt. But that's part of the not-easy part.~*/
 ++ @716 /*~Inspector Brega has offered his assistance - but he needs solid proof of your mentor's involvement.~*/ + BFSDOC.BregaIsABro
 ++ @717 /*~You'd be aiming a little above your skillset.~*/ + BFSDOC.InsultingApprenticesForFunAndProfit
 END

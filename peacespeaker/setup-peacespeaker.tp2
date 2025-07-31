@@ -102,4 +102,4 @@ APPEND ~ITEMDIAL.2da~
 UNLESS ~BFSSW~
 
 // Sounds
-
+COPY ~%MOD_FOLDER%/wav~ ~override~

@@ -19,7 +19,7 @@ IF ~Global("BFSEmelinaTaskAccepted","GLOBAL",1) PartyHasItem("BFSSW")~ THEN BFSC
 SAY @501 /*We are tasked with maintaining the lawful practice of magic. Such vigilance is the only means to safeguard Amn and its people. Your... concerns are of the utmost annoya— ah, importance to us. What is it you wish to report?*/
 ++ @502 /*You don't seem particularly fond of your duties.*/ + BFSCOS.deathandtaxes
 ++ @503 /*An apprentice gave me a magical weapon and specifically bade me not to inform the Cowled Wizards.*/ + BFSCOS.rattedout
-++ @506 /*I have nothing to report*/ + BFSCOS.secondthoughts
+++ @506 /*I have nothing to report.*/ + BFSCOS.secondthoughts
 END
 
 IF ~~ BFSCOS.secondthoughts
@@ -50,13 +50,13 @@ IF ~~ BFSCOS.cont
 SAY ~...~
 = @513 /*Velanna thought she could deceive me? Inconceivable*/
 = @514 /*~I shall resolve your complaint personally. Your part is over. Accept this offering of coin as a sign of my esteem. The Cowled Wizards thank you for your service.~*/
-++ @515 /*Since I've helped you, I want to ask where I can find someone taken by--*/ + BFSCOS.end
+++ @515 /*Since I've helped you, I want to ask where I can find someone taken by—*/ + BFSCOS.end
 ++ @516 /*You are really worked up about this.*/ + BFSCOS.end
 END
 
 IF ~~ BFSCOS.end
 SAY @517 /*I must be off. Excuse me.*/
-IF ~~ DO ~AddJournalEntry(@100003, QUEST_DONE) TakePartyItem("BFSSW") DestroyItem("BFSSW") SetGlobal("BFSEmelinaTaskAccepted","GLOBAL",2) GiveGoldForce(2000) AddXPObject(Player1,1000) AddXPObject(Player2,1000) AddXPObject(Player3,1000) AddXPObject(Player4,1000) AddXPObject(Player5,1000) AddXPObject(Player6,1000) DestroySelf()~ EXIT
+IF ~~ DO ~AddJournalEntry(@100003, QUEST_DONE) TakePartyItem("BFSSW") DestroyItem("BFSSW") SetGlobal("BFSEmelinaTaskAccepted","GLOBAL",2) GiveGoldForce(2000) AddExperienceParty(6000) DestroySelf()~ EXIT
 END
 
 // Try to inform Brega instead
@@ -67,7 +67,7 @@ END
 
 CHAIN HABREGA BFS.Brega
 @518 /*Magical misconduct, you say? *sigh* Such matters fall beyond my jurisdiction. Regrettably.*/
-= @519 /*~You are not the first to report Cowled Wizard negligence. I cannot take these claims further - without proof my hands are tied. If you possess - or find - some form of evidence, I may be able to force the matter.~*/
+= @519 /*~You are not the first to report Cowled Wizard negligence. I cannot take these claims further. Without proof my hands are tied. If you possess, or find, some form of evidence, I may be able to force the matter.~*/
 = @520 /*~Otherwise, if you seek quick justice - some warped version of it - speak with the Cowled Wizards themselves. There are several present within this hall.~*/
 END
 IF ~~ DO ~EraseJournalEntry(@100002) AddJournalEntry(@100007, QUEST)~ EXIT
@@ -85,5 +85,5 @@ END
 CHAIN HABREGA BFS.BregaEvidenceEnd
 @523 /*~Thank you, citizen. Corruption within the Cowled Wizard ranks is rampant but, with this, we'll take a small step towards ending it.~*/
 = @524 /*Once the trial is over, I will personally see to freeing the soul from the sword. For now, as a token of the city's esteem and my personal thanks, I'd like to offer you a reward.*/
-DO ~AddJournalEntry(@100010, QUEST_DONE) TakePartyItem("BFSSW") DestroyItem("BFSSW") TakePartyItem("BFSJNL") DestroyItem("BFSJNL") GiveGoldForce(10000) AddXPObject(Player1,10000) AddXPObject(Player2,10000) AddXPObject(Player3,10000) AddXPObject(Player4,10000) AddXPObject(Player5,10000) AddXPObject(Player6,10000)~
+DO ~AddJournalEntry(@100010, QUEST_DONE) TakePartyItem("BFSSW") DestroyItem("BFSSW") TakePartyItem("BFSJNL") DestroyItem("BFSJNL") GiveGoldForce(10000) AddExperienceParty(15000)~
 EXIT
