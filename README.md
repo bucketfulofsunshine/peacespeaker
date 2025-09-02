@@ -24,9 +24,11 @@ A: This is my first released (small & short) quest mod, so I've no doubt there a
 
 ## SPECIAL THANKS
 
-* *RoyalProtector* for traifying the mod & adding the spanish translation. Then, as always, for cleaning up my code. <3 
+* [@royalprotector](https://github.com/szaumoor) for traifying the mod & adding the spanish translation. Then, as always, for cleaning up my code. <3 
 
-* *Zenblack* - who is a wizard in his own right & kindly made custom BAMs for the mod.
+* [@zenblack](https://github.com/zenblack) who is a wizard in his own right & kindly made custom BAMs for the mod.
+
+* [@dark0dave](https://github.com/sdark0dave) for being the silent guardian of all my github mods & his continued friendship. 
 
 * A big thank you to *Kantz* & *Niewiem* for saving my older files & sending them back my way so I could reuploaded them.
 
