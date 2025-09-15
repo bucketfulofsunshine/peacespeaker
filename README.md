@@ -1,4 +1,4 @@
-# PEACESPEAKER, THE ANTI-VIOLENCE SWORD
+# Peacespeaker, the Anti-Violence Sword (For BG2EE or EET)
 
 Embark on a short quest featuring a sentient scimitar, an apprentice who's in ***way*** over her head, & a grumpy Cowled Wizard. 
 
