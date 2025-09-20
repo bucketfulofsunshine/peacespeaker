@@ -1,18 +1,27 @@
+<p align="center">
+  <img src="https://64.media.tumblr.com/bd9f4da650ad915ea07fe619db101e5a/f83467379c46b182-fd/s400x600/a69e6313cbb84f8ebb0408f68b936cdb1d4e2f8d.pnj" />
+</p>
+
 # Peacespeaker, the Anti-Violence Sword (For BG2EE or EET)
 
 Embark on a short quest featuring a sentient scimitar, an apprentice who's in ***way*** over her head, & a grumpy Cowled Wizard. 
 
 This mod was created as a semi–tongue-in-cheek contribution (an anti-violence weapon) to the BG Modding Month contest.
 
+**V2.1 adds** 
+
+- A talking weapon (scimitar).
+- A short quest, with three different solutions, to solve the weapon's dilemma (or choose to ignore it altogether - your choice). 
+
 ## FAQ
 
 ### Q: Where can I start the quest?
 
-A: Explore Waukeen's Promenade after escaping Irenicus' Dungeon. If you leave the Promenade before speaking with the Twitchy Cowled One, then the quest cannot be started. 
+A: Explore Waukeen's Promenade after escaping Irenicus' Dungeon. Speak to the Twitchy Cowled One before leaving or the quest cannot be started. 
 
 ### Q: How do I report bugs or suggest improvements?
 
-A: This is my first released (small & short) quest mod, so I've no doubt there are inconsistencies & bugs lurking. Please contact me & I'll fix things up (with credit / thanks). <3
+A: This is my first released (small & short) quest mod. Please contact me if you find any bugs & I'll fix them up (with credit / thanks). <3
 
 ## CHANGELOG
 
