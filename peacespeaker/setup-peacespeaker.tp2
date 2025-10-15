@@ -1,6 +1,6 @@
 BACKUP ~peacespeaker/backup~
 SUPPORT ~bucketfulofsunshine on Discord~
-VERSION ~2.1~
+VERSION ~2.2~
 
 AUTO_TRA ~peacespeaker/translations/%s~
 
@@ -109,3 +109,4 @@ UNLESS ~BFSSW~
 
 // Sounds
 COPY ~%MOD_FOLDER%/wav~ ~override~
+
