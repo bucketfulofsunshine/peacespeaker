@@ -8,7 +8,7 @@ Embark on a short quest featuring a sentient scimitar, an apprentice who's in **
 
 This mod was created as a semi–tongue-in-cheek contribution (an anti-violence weapon) to the BG Modding Month contest.
 
-**V2.1 adds** 
+**V2.2 adds** 
 
 - A talking weapon (scimitar).
 - A short quest, with three different solutions, to solve the weapon's dilemma (or choose to ignore it altogether - your choice). 
@@ -25,7 +25,7 @@ A: This is my first released (small & short) quest mod. Please contact me if you
 
 ## CHANGELOG
 
-* 2.1 - Fully traified (thanks Royal), added Spanish translation (ditto), fixed small visual glitch on BAMs. 
+* 2.2 - Added Russian Translation - courtesy & thanks goes to [@Origanum8](https://arcanecoast.ru/forum/viewtopic.php?f=6&t=1986). 
 
 ## LICENSING
 
@@ -33,7 +33,9 @@ A: This is my first released (small & short) quest mod. Please contact me if you
 
 ## SPECIAL THANKS
 
-* [@royalprotector](https://github.com/szaumoor) for traifying the mod & adding the spanish translation. Then, as always, for cleaning up my code. <3 
+* [@royalprotector](https://github.com/szaumoor) for traifying the mod & adding the Spanish translation. Then, as always, for cleaning up my code. <3 
+
+* [@Origanum8](https://arcanecoast.ru/forum/viewtopic.php?f=6&t=1986) from ArcaneCoast for the Russian translation.
 
 * [@zenblack](https://github.com/zenblack) who is a wizard in his own right & kindly made custom BAMs for the mod.
 
