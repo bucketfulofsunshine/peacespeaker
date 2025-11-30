@@ -17,7 +17,7 @@ This mod was created as a semi–tongue-in-cheek contribution (an anti-violence 
 
 ### Q: Where can I start the quest?
 
-A: Explore Waukeen's Promenade after escaping Irenicus' Dungeon. Speak to the Twitchy Cowled One before leaving or the quest cannot be started. 
+A: Explore Waukeen's Promenade after escaping Irenicus' Dungeon & speak to the Twitchy Cowled One. 
 
 ### Q: How do I report bugs or suggest improvements?
 
