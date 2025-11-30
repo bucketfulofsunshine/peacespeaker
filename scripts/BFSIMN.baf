@@ -1,0 +1,19 @@
+// Imnesvale Solution Started 
+IF
+True()
+THEN
+RESPONSE #100
+CutSceneId(Player1)
+StorePartyLocations()
+FadeToColor([20.0],0)
+SetGlobal("BFSEmelinaUmarHills", "GLOBAL", 1)
+MoveViewPoint([2488.3438],INSTANT)
+Wait(1)
+JumpToPoint([2488.3438])
+SmallWait(5)
+FadeFromColor([20.0],0)
+Wait(2)
+EraseJournalEntry(@100002)
+AddJournalEntry(@100005, QUEST)
+EndCutsceneMode()
+END
