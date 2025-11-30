@@ -1,9 +1,0 @@
-IF
-GlobalLT("Chapter","GLOBAL",3)
-Global("BFSApprenticeSpawn","AR0700",0)
-THEN
-RESPONSE #100
-CreateCreature("BFSCWL",[2226.1362],1)
-SetGlobal("BFSApprenticeSpawn","AR0700",1)
-Continue()
-END

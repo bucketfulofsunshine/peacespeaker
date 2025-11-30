@@ -1,9 +1,0 @@
-IF
-Global("BFSBregaInformed","GLOBAL",1)
-Global("BFSApprenticeSpawn2","AR0300",0)
-THEN
-RESPONSE #100
-CreateCreature("BFSCWL2",[3898.3201],1)
-SetGlobal("BFSApprenticeSpawn2","AR0300",1)
-Continue()
-END
