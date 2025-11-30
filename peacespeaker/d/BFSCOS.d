@@ -15,7 +15,7 @@ IF ~~ EXIT
 END
 
 // The quest is started, PC wants to inform the Cowled Wizards of Emelina's existence
-IF ~Global("BFSEmelinaTaskAccepted","GLOBAL",1) PartyHasItem("BFSSW")~ THEN BFSCOS.theniliedlikealiar
+IF ~Global("BFSEmelinaTaskAccepted","GLOBAL",1) Global("BFSEmelinaIntro","GLOBAL",1) PartyHasItem("BFSSW")~ THEN BFSCOS.theniliedlikealiar
 SAY @501 /*We are tasked with maintaining the lawful practice of magic. Such vigilance is the only means to safeguard Amn and its people. Your... concerns are of the utmost annoya— ah, importance to us. What is it you wish to report?*/
 ++ @502 /*You don't seem particularly fond of your duties.*/ + BFSCOS.deathandtaxes
 ++ @503 /*An apprentice gave me a magical weapon and specifically bade me not to inform the Cowled Wizards.*/ + BFSCOS.rattedout
@@ -56,13 +56,13 @@ END
 
 IF ~~ BFSCOS.end
 SAY @517 /*I must be off. Excuse me.*/
-IF ~~ DO ~AddJournalEntry(@100003, QUEST_DONE) TakePartyItem("BFSSW") DestroyItem("BFSSW") SetGlobal("BFSEmelinaTaskAccepted","GLOBAL",2) GiveGoldForce(2000) AddExperienceParty(6000) DestroySelf()~ EXIT
+IF ~~ DO ~EraseJournalEntry(@100001) EraseJournalEntry(@100002) AddJournalEntry(@100003, QUEST_DONE) TakePartyItem("BFSSW") DestroyItem("BFSSW") SetGlobal("BFSEmelinaTaskAccepted","GLOBAL",2) GiveGoldForce(2000) AddExperienceParty(6000) DestroySelf()~ EXIT
 END
 
 // Try to inform Brega instead
 // You sweet summer child, he wants to help, but his hands are tied
 EXTEND_BOTTOM HABREGA 0
-+ ~Global("BFSEmelinaTaskAccepted","GLOBAL",1) Global("BFSBregaInformed","GLOBAL",0)~ + @526 /*~I want to report an act of magical misconduct.~*/ DO ~SetGlobal("BFSBregaInformed","GLOBAL",1)~ + BFS.Brega
++ ~Global("BFSEmelinaTaskAccepted","GLOBAL",1) Global("BFSBregaInformed","GLOBAL",0) Global("BFSEmelinaIntro","GLOBAL",1)~ + @526 /*~I want to report an act of magical misconduct.~*/ DO ~SetGlobal("BFSBregaInformed","GLOBAL",1)~ + BFS.Brega
 END
 
 CHAIN HABREGA BFS.Brega
@@ -70,7 +70,7 @@ CHAIN HABREGA BFS.Brega
 = @519 /*~You are not the first to report Cowled Wizard negligence. I cannot take these claims further. Without proof my hands are tied. If you possess, or find, some form of evidence, I may be able to force the matter.~*/
 = @520 /*~Otherwise, if you seek quick justice - some warped version of it - speak with the Cowled Wizards themselves. There are several present within this hall.~*/
 END
-IF ~~ DO ~EraseJournalEntry(@100002) AddJournalEntry(@100007, QUEST)~ EXIT
+IF ~~ DO ~EraseJournalEntry(@100001) EraseJournalEntry(@100002) AddJournalEntry(@100007, QUEST)~ EXIT
 
 // You have the receipts though
 EXTEND_BOTTOM HABREGA 0

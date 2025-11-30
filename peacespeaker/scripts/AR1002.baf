@@ -8,3 +8,14 @@ CreateCreature("BFSCOS",[840.634],1)
 SetGlobal("BFSMentorSpawn","AR1002",1)
 Continue()
 END
+
+IF
+Exists("BFCOS")
+Global("BFSMentorRuns","AR1002",0)
+GlobalGT("BFSBregaInformed","GLOBAL",0)
+THEN
+RESPONSE #100
+ActionOverride("BFCOS",DestroySelf())
+SetGlobal("BFSMentorRuns","AR1002",1)
+Continue()
+END
