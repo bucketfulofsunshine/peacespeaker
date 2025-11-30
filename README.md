@@ -8,7 +8,7 @@ Embark on a short quest featuring a sentient scimitar, an apprentice who's in **
 
 This mod was created as a semi–tongue-in-cheek contribution (an anti-violence weapon) to the BG Modding Month contest.
 
-**V2.2 adds** 
+**V2.3 adds** 
 
 - A talking weapon (scimitar).
 - A short quest, with three different solutions, to solve the weapon's dilemma (or choose to ignore it altogether - your choice). 
@@ -26,6 +26,7 @@ A: This is my first released (small & short) quest mod. Please contact me if you
 ## CHANGELOG
 
 * 2.2 - Added Russian Translation - courtesy & thanks goes to [@Origanum8](https://arcanecoast.ru/forum/viewtopic.php?f=6&t=1986). 
+* 2.3 - Fixed Journal Entries not adding & removing correctly. 
 
 ## LICENSING
 
