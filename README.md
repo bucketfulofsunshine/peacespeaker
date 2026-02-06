@@ -34,7 +34,7 @@ A: This is my first released (small & short) quest mod. Please contact me if you
 
 ## SPECIAL THANKS
 
-* [@royalprotector](https://github.com/szaumoor) for traifying the mod & adding the Spanish translation. Then, as always, for cleaning up my code. <3 
+* [@kaelyn](https://github.com/szaumoor) for traifying the mod & adding the Spanish translation. Then, as always, for cleaning up my code. <3 
 
 * [@Origanum8](https://arcanecoast.ru/forum/viewtopic.php?f=6&t=1986) from ArcaneCoast for the Russian translation.
 
