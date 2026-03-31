@@ -2,7 +2,7 @@
   <img src="https://64.media.tumblr.com/bd9f4da650ad915ea07fe619db101e5a/f83467379c46b182-fd/s400x600/a69e6313cbb84f8ebb0408f68b936cdb1d4e2f8d.pnj" />
 </p>
 
-# Peacespeaker, the Anti-Violence Sword (For BG2EE or EET)
+# Peacespeaker, the Anti-Violence Sword (For BG2EE)
 
 Embark on a short quest featuring a sentient scimitar, an apprentice who's in ***way*** over her head, & a grumpy Cowled Wizard. 
 
