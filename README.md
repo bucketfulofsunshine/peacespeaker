@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://64.media.tumblr.com/419e1f92bf4b2dec3928bf3952c5fb65/f83467379c46b182-82/s540x810/85b331abbfb72d0f8ed813fb295f480038a085c5.pnj" />
+  <img src="https://64.media.tumblr.com/d7f8aadc08e1162a3ffdbf52dacb48da/f83467379c46b182-37/s540x810/2ca1281519dc51fadf6024051e113bec8c2cfba3.pnj" />
 </p>
 
 # Peacespeaker, the Anti-Violence Sword (For BG2EE)
