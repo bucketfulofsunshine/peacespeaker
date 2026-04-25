@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://64.media.tumblr.com/bd9f4da650ad915ea07fe619db101e5a/f83467379c46b182-fd/s400x600/a69e6313cbb84f8ebb0408f68b936cdb1d4e2f8d.pnj" />
+  <img src="https://64.media.tumblr.com/e9e6b843c4c1dd52ecff22ed2209ada5/f83467379c46b182-9d/s500x750/d1d8d68af15b1fb1764897e6e04167fbdabbbc34.pnj" />
 </p>
 
 # Peacespeaker, the Anti-Violence Sword (For BG2EE)
@@ -19,14 +19,10 @@ This mod was created as a semi–tongue-in-cheek contribution (an anti-violence 
 
 A: Explore Waukeen's Promenade after escaping Irenicus' Dungeon & speak to the Twitchy Cowled One. 
 
-### Q: How do I report bugs or suggest improvements?
-
-A: This is my first released (small & short) quest mod. Please contact me if you find any bugs & I'll fix them up (with credit / thanks). <3
-
 ## CHANGELOG
 
 * 2.2 - Added Russian Translation - courtesy & thanks goes to [@Origanum8](https://arcanecoast.ru/forum/viewtopic.php?f=6&t=1986). 
-* 2.3 - Fixed Journal Entries not adding & removing correctly. 
+* 2.3 - Fixed Journal Entries not being added & removed correctly. 
 
 ## LICENSING
 
@@ -40,7 +36,7 @@ A: This is my first released (small & short) quest mod. Please contact me if you
 
 * [@zenblack](https://github.com/zenblack) who is a wizard in his own right & kindly made custom BAMs for the mod.
 
-* [@dark0dave](https://github.com/sdark0dave) for being the silent guardian of all my github mods & his continued friendship. 
+* [@dark0dave](https://github.com/dark0dave) for being the silent guardian of all my github mods & his continued friendship. 
 
 * A big thank you to *Kantz* & *Niewiem* for saving my older files & sending them back my way so I could reuploaded them.
 
